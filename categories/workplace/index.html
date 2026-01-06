@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>职场 - 项目分类 - 项目地图驿站</title>
+    <meta name="description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta name="keywords" content="项目地图驿站,优质项目,创作者,技术项目">
+    <meta name="author" content="项目地图驿站">
+    <link rel="canonical" href="https://xmdtyz.com/categories/workplace">
+    <meta property="og:title" content="职场 - 项目分类 - 项目地图驿站">
+    <meta property="og:description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta property="og:url" content="https://xmdtyz.com/categories/workplace">
+    <meta property="og:type" content="website">
+    
+    <!-- 网站统计代码 -->
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ca86b4e64d755f4afa117488af3fc29d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 8px;
+            width: 70px;
+        }
+
+        .submit-column-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-column-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        
+        /* 项目卡片样式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 15px;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #007bff;
+        }
+        
+        .search-button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 筛选区域 */
+        .filters-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        /* 搜索统计 */
+        .search-stats {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 分类和标签样式 */
+        .categories-list, .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .category-item, .tag-item {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-item:hover, .tag-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* 创作者列表样式 */
+        .creators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .creator-item {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 页脚链接 */
+        .footer-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <!--<img src="https://via.placeholder.com/40" alt="Logo">-->
+                <span class="logo-text">项目地图驿站</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="/">首页</a></li>
+                <li class="nav-item "><a href="/featured">精选</a></li>
+                <li class="nav-item "><a href="/ranking">排行</a></li>
+                <li class="nav-item active"><a href="/categories">分类</a></li>
+                <li class="nav-item "><a href="/creators">创作者</a></li>
+                <li class="nav-item "><a href="/tags">标签</a></li>
+                <li class="nav-item "><a href="/explore">探索</a></li>
+                <li class="nav-item "><a href="/about">关于</a></li>
+                <li class="nav-item "><a href="/about">我要想拥有网站</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search-box" action="/categories" method="GET">
+                    <input type="text" name="q" placeholder="搜索项目...">
+                </form>
+                <a href="https://wj.qq.com/s2/25179437/d4f5/" class="submit-column-btn" target="_blank">提交专栏</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="main-content">
+        
+    <!-- 页面路径 -->
+    <div class="breadcrumb">
+        <a href="/">首页</a> &gt; 浏览专栏分类
+    </div>
+    
+    <!-- 标题区域 -->
+    <div class="page-header">
+        <h1 class="page-title">浏览专栏</h1>
+        <p class="page-subtitle">按分类查找你感兴趣的专栏内容</p>
+    </div>
+    
+    <!-- 搜索框 -->
+    <div class="search-section">
+        <input type="text" id="search-input" placeholder="搜索专栏、作者或标签..." class="search-box">
+        <button id="search-btn" class="search-button">搜索</button>
+    </div>
+    
+    <!-- 筛选区域 -->
+    <div class="filters-section">
+        <!-- 分类筛选 -->
+        <div class="filter-group">
+            <h3 class="filter-title">分类筛选</h3>
+            <div class="filter-options" id="category-filters">
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="tech"> 技术
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="product"> 产品
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="design"> 设计
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="startbus"> 创业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="workplace"> 职场
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="reading"> 阅读
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="psychology"> 心理
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="business"> 商业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="Internet"> 互联网
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="life"> 生活
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="sidehustle"> 副业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="podcast"> 播客
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="redbook"> 小红书
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="ai"> AI
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="caselibrary"> 案例库
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="note"> 笔记
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="operation"> 运营
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="guide"> 指南
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="midjourney"> Midjourney
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="chatgpt"> ChatGPT
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="project"> 项目
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="tool"> 工具
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="creation"> 创作
+                    </label>
+                
+            </div>
+        </div>
+        
+        <!-- 价格筛选 -->
+        <div class="filter-group">
+            <h3 class="filter-title">价格筛选</h3>
+            <div class="filter-options" id="price-filters">
+                <label class="filter-option">
+                    <input type="radio" name="price" value="all" checked> 全部
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="price" value="free"> 免费
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="price" value="paid"> 付费
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 搜索统计 -->
+    <div class="search-stats" id="search-stats">
+        找到 45 个专栏
+    </div>
+    
+    <!-- 项目列表 -->
+    <div class="projects-grid" id="projects-grid">
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/1000036.html'">
+                <img src="https://static.xiaobot.net/paper/2023-12-05/284144/a970367d1b981d1cce747a3eb4f818a1.jpeg" alt="大厂P9洋哥：职场晋升一本通">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by findyi</span>
+                    </div>
+                    <h3 class="project-title">大厂P9洋哥：职场晋升一本通</h3>
+                    <p class="project-description">
+                        作者 findyi，江湖人称洋哥，AI破局俱乐部主理人，互联网从业15年，担任过网易事业部总经理、3...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1095</span>
+                        <span>文章 已更新 42 篇</span>
+                        <span>价格 ¥10.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/110119.html'">
+                <img src="https://static.xiaobot.net/paper/2023-05-23/230822/ac85af57f18569131cd8ac9c1f883979.png" alt="成为人生教练需要知道的十件事">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by Ciao</span>
+                    </div>
+                    <h3 class="project-title">成为人生教练需要知道的十件事</h3>
+                    <p class="project-description">
+                        这是一份科普人生教练及如何启动这份职业的专栏。
+适合读者:
+-对人生教练这个职业感兴趣但不清楚自己是...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 102</span>
+                        <span>文章 已更新 13 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="free" onclick="window.location.href='/p/88leader.html'">
+                <img src="https://static.xiaobot.net/paper/2023-02-24/5047/df2688cca133c040f7c805ff165a76a4.jpeg" alt="底层打工者苟活指南">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 失业艺术家王二鹅</span>
+                    </div>
+                    <h3 class="project-title">底层打工者苟活指南</h3>
+                    <p class="project-description">
+                        我是二鹅，前字节跳动高级产品，现某上市集团产品总监
+一个经历过大中小厂移动互联网时代起伏，现正努力苟...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 0</span>
+                        <span>文章 已更新 85 篇</span>
+                        <span>价格 免费</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/Chadandrygoods.html'">
+                <img src="https://static.xiaobot.net/paper/2023-03-02/198843/34afe787dfd2e36eabfc9ce57bb6fb50.jpeg" alt="茶蛋干货铺">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 小茶和Frank</span>
+                    </div>
+                    <h3 class="project-title">茶蛋干货铺</h3>
+                    <p class="project-description">
+                        一个茶蛋团队沉淀多年的职场经验和行业信息的干货铺；
+一个反焦虑和成功学，打工人自我成长的乌托邦；
+一...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 691</span>
+                        <span>文章 已更新 42 篇</span>
+                        <span>价格 ¥299.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/DPXJ.html'">
+                <img src="https://static.xiaobot.net/paper/2023-01-11/4849/cea9ed1280aa21d0af5bf392e4151591.png" alt="镜同学的产品驿站 ‖ 2023">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 東甁西鏡</span>
+                    </div>
+                    <h3 class="project-title">镜同学的产品驿站 ‖ 2023</h3>
+                    <p class="project-description">
+                        本专栏的朴素初心：成为产品同学的价值充电站，以梦为马，长期助力，帮你驶达理想的产品彼岸。
+
+本专栏购...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 35</span>
+                        <span>文章 已更新 101 篇</span>
+                        <span>价格 ¥199.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/Meditation101.html'">
+                <img src="https://static.xiaobot.net/paper/2022-06-01/1384/6536170a9889d3b05f67014d6949f2d9.jpeg" alt="禅修第一课🧘‍♀️：从零开启冥想+366天练习">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 眼睛里有光的azure</span>
+                    </div>
+                    <h3 class="project-title">禅修第一课🧘‍♀️：从零开启冥想+366天练习</h3>
+                    <p class="project-description">
+                        为了更好地完成专栏，我正在明就仁波切的Terga International 学习 Meditati...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 420</span>
+                        <span>文章 已更新 56 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/PandaJay01.html'">
+                <img src="https://static.xiaobot.net/paper/2024-01-12/331057/93642a6100ba6a9357aea3c570d47d30.png" alt="AI提示词与职场提效">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 熊猫Jay</span>
+                    </div>
+                    <h3 class="project-title">AI提示词与职场提效</h3>
+                    <p class="project-description">
+                        学习 AI 提示词基础知识和技巧, 利用提示词或工具解决职场问题, 留足时间赋能副业。
+
+作者: 熊...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1202</span>
+                        <span>文章 已更新 59 篇</span>
+                        <span>价格 ¥19.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="free" onclick="window.location.href='/p/Peter1981_HR.html'">
+                <img src="https://static.xiaobot.net/paper/2021-12-24/5116/2a1948c91fff10458c6dcedbffc9d7cb.jpeg" alt="简历的故事">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by Peter</span>
+                    </div>
+                    <h3 class="project-title">简历的故事</h3>
+                    <p class="project-description">
+                        分享简历与面试背后的故事
+个人微信：Peter1981_HR
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 59</span>
+                        <span>文章 已更新 497 篇</span>
+                        <span>价格 免费</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/ThinkDifferent.html'">
+                <img src="https://static.xiaobot.net/paper/2025-01-06/203456/9038f6556c834927b190eb3a8bd52374.png" alt="六浪行书 第一季">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 六</span>
+                    </div>
+                    <h3 class="project-title">六浪行书 第一季</h3>
+                    <p class="project-description">
+                        小六，前互联网公司组织治理。 
+2022年裸辞，开启环球旅居。 
+此专栏是记录我探索世界与探索自我的...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 60</span>
+                        <span>文章 已更新 56 篇</span>
+                        <span>价格 ¥66.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/Tony6688.html'">
+                <img src="https://static.xiaobot.net/paper/2024-01-18/440271/f686dd9773e314566c8dd10979fc9d11.jpeg" alt="程序员职场避坑指南">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 托尼学长</span>
+                    </div>
+                    <h3 class="project-title">程序员职场避坑指南</h3>
+                    <p class="project-description">
+                        作者：托尼学长，互联网老兵，前美团高级技术经理，前新东方技术总监，曾就职于京东和去哪儿网。
+
+本小册...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1250</span>
+                        <span>文章 已更新 40 篇</span>
+                        <span>价格 ¥199.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/afanfan.html'">
+                <img src="https://static.xiaobot.net/paper/afanfan.png" alt="阿饭的宝藏">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 饭饭</span>
+                    </div>
+                    <h3 class="project-title">阿饭的宝藏</h3>
+                    <p class="project-description">
+                        一份丰富且有品质的精神食粮。
+1，将我12年写作锻炼的信息搜寻能力和品味转化为一份独特的精神食粮。
+...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 728</span>
+                        <span>文章 已更新 366 篇</span>
+                        <span>价格 ¥199.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/aistudyjava666.html'">
+                <img src="https://static.xiaobot.net/paper/2023-09-09/282464/71c8462ab2206c819991da400ded11bc.jpeg" alt="AI 辅助学 Java">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 苍何</span>
+                    </div>
+                    <h3 class="project-title">AI 辅助学 Java</h3>
+                    <p class="project-description">
+                        专栏作者：苍何，土木转码，前阿里高级开发，当下某公司技术中心负责人。毕业后边自学编程边记录，原创文章...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 49</span>
+                        <span>文章 已更新 40 篇</span>
+                        <span>价格 ¥10.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/along.html'">
+                <img src="https://static.xiaobot.net/paper/2022-08-22/66780/d3b073c65dd390b560e08d27324c8ab2.jpeg" alt="去码头整点恶龙">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 提刀少年斩恶龙</span>
+                    </div>
+                    <h3 class="project-title">去码头整点恶龙</h3>
+                    <p class="project-description">
+                        LI道长在躺平的自留地，不方便在社交媒体上露出来的狐狸尾巴：
+1、一页一生：我了解的真 老板和真 大...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 545</span>
+                        <span>文章 已更新 125 篇</span>
+                        <span>价格 ¥139.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/antidrucker.html'">
+                <img src="https://static.xiaobot.net/paper/2022-03-13/19932/796ff1f6b5c1344db81243c470f3fead.jpeg" alt="被管理者实践">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by Mustang</span>
+                    </div>
+                    <h3 class="project-title">被管理者实践</h3>
+                    <p class="project-description">
+                        一个资深「被」管理专家为您讲述，打工人的职场生存艺术与摸鱼而不划水的晋级攻略，力图让每个打工人获得理...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 115</span>
+                        <span>文章 已更新 38 篇</span>
+                        <span>价格 ¥999.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/antiloveholic.html'">
+                <img src="https://static.xiaobot.net/paper/2022-08-07/22299/d8e073394aa7ce3433815d2147ece8c1.jpeg" alt="恋爱脑治愈手册">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by Epicure</span>
+                    </div>
+                    <h3 class="project-title">恋爱脑治愈手册</h3>
+                    <p class="project-description">
+                        恋爱脑的发生机制是什么？
+是否反复被同一种人折磨？
+是否怀疑自己爱无能？
+恋爱脑是否影响到了正常生活...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 37</span>
+                        <span>文章 已更新 15 篇</span>
+                        <span>价格 ¥39.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/azure2023.html'">
+                <img src="https://static.xiaobot.net/paper/2023-01-01/1384/6e8b0e08a84bfd70ec3cc4363727f8da.jpeg" alt="azure 的 1% · 第二季连载中～">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 眼睛里有光的azure</span>
+                    </div>
+                    <h3 class="project-title">azure 的 1% · 第二季连载中～</h3>
+                    <p class="project-description">
+                        对 Naval 8+1 System 的践行，
+对「如何做自己、持续进化」的回答。
+
+🔮 修行 · ...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 202</span>
+                        <span>文章 已更新 91 篇</span>
+                        <span>价格 ¥199.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/camelliayang.html'">
+                <img src="https://static.xiaobot.net/paper/2023-07-21/311807/329ab1b0f347a16f3ce9e9fe510eef15.jpeg" alt="理想屯">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 翊瑄Camellia</span>
+                    </div>
+                    <h3 class="project-title">理想屯</h3>
+                    <p class="project-description">
+                        你好哇！我是翊瑄 Camellia。曾旅居新西兰十年、伦敦两年，如今常驻葡萄牙，从事写作、翻译与远程...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 279</span>
+                        <span>文章 已更新 100 篇</span>
+                        <span>价格 ¥299.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/career001.html'">
+                <img src="https://static.xiaobot.net/paper/2022-12-26/111555/cb87426471d64239e40347ec7283787d.jpeg" alt="升职加薪百宝箱">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 倪忆菁</span>
+                    </div>
+                    <h3 class="project-title">升职加薪百宝箱</h3>
+                    <p class="project-description">
+                        我是忆菁，工作11年，从500强分析师 — 互联网运营总监 — 职业教育公司合伙人。
+
+这个专栏将会...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 72</span>
+                        <span>文章 已更新 102 篇</span>
+                        <span>价格 ¥79.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="free" onclick="window.location.href='/p/causally.html'">
+                <img src="https://static.xiaobot.net/paper/2023-05-09/91/913c29cc99b148760fbf5d439414fe05.png" alt="练习失败">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by Chaojun</span>
+                    </div>
+                    <h3 class="project-title">练习失败</h3>
+                    <p class="project-description">
+                        如果有一个基调的话应当是，和你分享我的成长故事，一个普通人不断打磨自己，持续精进，我遇到的问题、面对...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1</span>
+                        <span>文章 已更新 189 篇</span>
+                        <span>价格 免费</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/clearmind.html'">
+                <img src="https://static.xiaobot.net/paper/2023-04-28/49514/e9308906f5d91c5d6fa7161af4f751a9.jpeg" alt="行动派手册">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 诺壹乔</span>
+                    </div>
+                    <h3 class="project-title">行动派手册</h3>
+                    <p class="project-description">
+                        这里写了一名十年自由职业者，对于降低精神内耗，高效展开行动的思考。
+
+诺壹乔 | 自由职业者、培训师...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 58</span>
+                        <span>文章 已更新 19 篇</span>
+                        <span>价格 ¥36.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/code.html'">
+                <img src="https://static.xiaobot.net/paper/2023-04-06/83301/b3bfa0e32eaff0c19ff1d7e3598c8c90.png" alt="互联网生存指南">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 熊</span>
+                    </div>
+                    <h3 class="project-title">互联网生存指南</h3>
+                    <p class="project-description">
+                        别人offer收割机，你投简历打水漂。别人升职加薪不费力，你却努力工作无人知。
+简历怎么写？面试怎么...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 170</span>
+                        <span>文章 已更新 59 篇</span>
+                        <span>价格 ¥19.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/dam.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-07/66939/6fc4ea5b22a1ac1b68bb866648f4ae08.jpeg" alt="重设自我：设计师求职指南">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 柴林</span>
+                    </div>
+                    <h3 class="project-title">重设自我：设计师求职指南</h3>
+                    <p class="project-description">
+                        ✏️ Redesign Yourself.
+Hi，我是柴林，这是一个为设计师的面试求职与职业发展提供...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 165</span>
+                        <span>文章 已更新 43 篇</span>
+                        <span>价格 ¥69.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/daoshu.html'">
+                <img src="https://static.xiaobot.net/paper/2023-04-18/260754/d5a3c748877216bd0b50af732995aee7.jpeg" alt="广告总监的10年营销策划经验">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 道叔</span>
+                    </div>
+                    <h3 class="project-title">广告总监的10年营销策划经验</h3>
+                    <p class="project-description">
+                        这里是曾经身为营销总监的道叔做营销广告，做策划的全部经验。
+
+本册可说是营销人百宝书，目前已更新14...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 161</span>
+                        <span>文章 已更新 159 篇</span>
+                        <span>价格 ¥19.8</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/effortCG.html'">
+                <img src="https://static.xiaobot.net/paper/2023-05-09/127926/28040ff4b0ff57b9e99d8fd094f70dde.jpeg" alt="前端快速入门">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 晨光</span>
+                    </div>
+                    <h3 class="project-title">前端快速入门</h3>
+                    <p class="project-description">
+                        专栏作者：晨光， 双非师范大学毕业，5 年前端开发，目前在某大厂担任高级前端工程师，本专栏致力于帮助...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 86</span>
+                        <span>文章 已更新 44 篇</span>
+                        <span>价格 ¥10.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/findyi123.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-03/284144/a5b08da698d6ea05754fbaa6c5ea8024.jpeg" alt="个人IP从入门到变现">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by findyi</span>
+                    </div>
+                    <h3 class="project-title">个人IP从入门到变现</h3>
+                    <p class="project-description">
+                        作者 findyi，江湖人称洋哥，AI破局俱乐部主理人，互联网从业15年。
+
+公众号、知乎积累读者5...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 3049</span>
+                        <span>文章 已更新 52 篇</span>
+                        <span>价格 ¥29.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/ip50.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-03/7466/87490548dddcee82fe17f9895ed5a85c.jpeg" alt="一人企业·IP从0到赚钱50问">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by IDO老徐</span>
+                    </div>
+                    <h3 class="project-title">一人企业·IP从0到赚钱50问</h3>
+                    <p class="project-description">
+                        我是 IDO老徐 。在职场，玩副业，副业超主业。探索「一人企业复利商业化」，IP 复利商业化， 持续...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1055</span>
+                        <span>文章 已更新 55 篇</span>
+                        <span>价格 ¥36.66</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/jghbd.html'">
+                <img src="https://static.xiaobot.net/paper/2022-06-27/3755/0983fc129b0650bbbf24576077b762bd.jpeg" alt="如何提升结构化表达能力">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 曹将</span>
+                    </div>
+                    <h3 class="project-title">如何提升结构化表达能力</h3>
+                    <p class="project-description">
+                        🤓作者曹将，《高效学习：曹将的公开课》《PPT炼成记》作者。
+🚀 一共42个真实案例，解读常见的结构...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 2782</span>
+                        <span>文章 已更新 45 篇</span>
+                        <span>价格 ¥49.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/kuailexiaoniu.html'">
+                <img src="https://static.xiaobot.net/paper/2024-03-07/67324/04619eb0e984902f47b1658a1fc229b9.png" alt="牛牛的自由之路日志 | 从一到无穷大">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 牛牛（自由版）</span>
+                    </div>
+                    <h3 class="project-title">牛牛的自由之路日志 | 从一到无穷大</h3>
+                    <p class="project-description">
+                        📚 本专栏
+- 如果你正在探索第二曲线；
+- 如果你也处在二三十岁迷茫期；
+- 如果你想看看大厂前同...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 110</span>
+                        <span>文章 已更新 56 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/lawyersredbook.html'">
+                <img src="https://static.xiaobot.net/paper/2023-09-21/355235/1ee59fd7f10a8e21405888658646679f.jpeg" alt="律师修炼手册">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 莴苣姑娘</span>
+                    </div>
+                    <h3 class="project-title">律师修炼手册</h3>
+                    <p class="project-description">
+                        2018年，参加完纽约州律考，我便只身前往香港一头扎进我的第一份工作--一家美资所的资本市场律师。从...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 562</span>
+                        <span>文章 已更新 26 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/mianshi.html'">
+                <img src="https://static.xiaobot.net/paper/2024-02-22/7466/0132bbb51ff91165406fc5b354e6e493.jpeg" alt="技术人的简历面试跳槽30问">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by IDO老徐</span>
+                    </div>
+                    <h3 class="project-title">技术人的简历面试跳槽30问</h3>
+                    <p class="project-description">
+                        普通程序员，没有大厂背景，没有名校光环。一个半月，面试几十场，到手7个offer，薪资最高涨幅 40...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 379</span>
+                        <span>文章 已更新 36 篇</span>
+                        <span>价格 ¥16.69</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/mindset.html'">
+                <img src="https://static.xiaobot.net/paper/2022-12-31/35190/bea9b73a66eb85c8fbf6f436ff7e2903.jpeg" alt="心态大师 1.0【已完结】">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 李奕👩🏻‍🌾</span>
+                    </div>
+                    <h3 class="project-title">心态大师 1.0【已完结】</h3>
+                    <p class="project-description">
+                        想到「心态」作为新年小册的主题，是因为我向来觉得心态好是自己的优点，然而在起伏不断的2022年中，我...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1251</span>
+                        <span>文章 已更新 37 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/pikachonghh.html'">
+                <img src="https://static.xiaobot.net/paper/2024-02-16/97803/8d30ba28e932ab8ab2c9fb5e2c506663.jpeg" alt="人人都能读懂的技术专栏">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 程序员冲少</span>
+                    </div>
+                    <h3 class="project-title">人人都能读懂的技术专栏</h3>
+                    <p class="project-description">
+                        在大厂里做过百万级、千万级、亿级、十亿级的系统，这些诚然是富有挑战的
+
+但冰冷的DAU、GMV，复杂...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 126</span>
+                        <span>文章 已更新 15 篇</span>
+                        <span>价格 ¥39.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/pojun.html'">
+                <img src="https://static.xiaobot.net/paper/2024-01-10/414210/9a9a9e2445abf28c272b4a6d84b66821.png" alt="职场进阶一本通">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 破军</span>
+                    </div>
+                    <h3 class="project-title">职场进阶一本通</h3>
+                    <p class="project-description">
+                        破军，浙大硕士，多家科技公司联合创始人、品牌公司法人CEO、AI 破局初创合伙人；就职过大国企、网易...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 486</span>
+                        <span>文章 已更新 44 篇</span>
+                        <span>价格 ¥10.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/qinxixi.html'">
+                <img src="https://static.xiaobot.net/paper/2025-03-31/7532/fa6e2ca0ed47e6e231ef52d473ecbe00.jpeg" alt="细细の成长花园">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 秦细细</span>
+                    </div>
+                    <h3 class="project-title">细细の成长花园</h3>
+                    <p class="project-description">
+                        公众号/小红书/即刻：@秦细细
+
+嗨，我是细细，一个在地球online游戏「自由职业副本」持续探索的...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 82</span>
+                        <span>文章 已更新 219 篇</span>
+                        <span>价格 ¥199.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/readingtime111.html'">
+                <img src="https://static.xiaobot.net/paper/2024-07-29/94333/d8a5395d5f25738e152df8edc25df981.jpeg" alt="卡片写作与AI写作变现">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 小米</span>
+                    </div>
+                    <h3 class="project-title">卡片写作与AI写作变现</h3>
+                    <p class="project-description">
+                        本专栏不讲那些老掉牙的写作方法，而是帮你打通写作的底层逻辑，下笔就能写。
+
+解决问题：
+1.想写作，...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1112</span>
+                        <span>文章 已更新 18 篇</span>
+                        <span>价格 ¥19.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/retailhistory.html'">
+                <img src="https://static.xiaobot.net/paper/2023-02-26/881/1a3d10adb47294e941099620091af511.png" alt="然阿姨的成长顿悟2023-2024">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 然阿姨</span>
+                    </div>
+                    <h3 class="project-title">然阿姨的成长顿悟2023-2024</h3>
+                    <p class="project-description">
+                        在大厂打工的 36 岁的产品经理然阿姨，2023 继续会写一些较为私密的感悟，主要在这个买断制专栏，...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 112</span>
+                        <span>文章 已更新 132 篇</span>
+                        <span>价格 ¥79.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/shenqiku.html'">
+                <img src="https://static.xiaobot.net/paper/2023-12-18/1848/a80e0df69e762619c1062cd83066d8b8.png" alt="365个精选效率软件神器">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 郭耀天¹</span>
+                    </div>
+                    <h3 class="project-title">365个精选效率软件神器</h3>
+                    <p class="project-description">
+                        这是玩赚电商旗下软件工具神器库，整理分享工作生活中常用各种软件神器，如果工作中经常遇到各种问题，需要...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 89</span>
+                        <span>文章 已更新 332 篇</span>
+                        <span>价格 ¥39.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/smarsworld.html'">
+                <img src="https://static.xiaobot.net/paper/2023-10-23/137015/b5dfd069a3f8d27b4aeb3b6f7f7db4e9.jpeg" alt="看见新世界｜苏陌年">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 苏陌年</span>
+                    </div>
+                    <h3 class="project-title">看见新世界｜苏陌年</h3>
+                    <p class="project-description">
+                        苏陌年，作家，咨询师
+
+曾在光线传媒、吾皇万睡、百度做创意策略工作
+
+职场八年，与艺术家为伍，与精英...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 200</span>
+                        <span>文章 已更新 40 篇</span>
+                        <span>价格 ¥399.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/testdata.html'">
+                <img src="https://static.xiaobot.net/paper/2022-09-19/81874/0d2e9c0e5f61c34e2e983bf9e041265d.jpeg" alt="软测面试精选题库">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 小谭</span>
+                    </div>
+                    <h3 class="project-title">软测面试精选题库</h3>
+                    <p class="project-description">
+                        太多人，搞不定软件测试的面试。
+太多人，找不到面试题的最优答案。
+太多人，面试回答极其普通，没有特点...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 66</span>
+                        <span>文章 已更新 93 篇</span>
+                        <span>价格 ¥49.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/twinkleaway.html'">
+                <img src="https://static.xiaobot.net/paper/2021-12-21/1384/8a87a1e3affce26fd9c2ea093315a383.jpeg" alt="azure 的 1% · 第一季（完结）">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 眼睛里有光的azure</span>
+                    </div>
+                    <h3 class="project-title">azure 的 1% · 第一季（完结）</h3>
+                    <p class="project-description">
+                        对 Naval 8+1 System 的践行，
+对「如何做自己、持续进化」的回答。
+
+🧘‍♀️ 修行...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 149</span>
+                        <span>文章 已更新 111 篇</span>
+                        <span>价格 ¥188.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/universal-wisdom.html'">
+                <img src="https://static.xiaobot.net/paper/2022-06-21/1/265c35a32904b0a69549e8dab5c55921.jpeg" alt="知识工作者的普世智慧">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by Light</span>
+                    </div>
+                    <h3 class="project-title">知识工作者的普世智慧</h3>
+                    <p class="project-description">
+                        足够简单才能普世，足够智慧才有价值。
+
+这本小册的野心是，为不限行业的知识工作者，提供通用、必需的底...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 638</span>
+                        <span>文章 已更新 23 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/weichong123.html'">
+                <img src="https://static.xiaobot.net/paper/2023-07-05/270923/a3beae10d5f57e09de350ab61398c10d.jpeg" alt="职场跃迁笔记">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 张伟崇 | PPT培训&设计</span>
+                    </div>
+                    <h3 class="project-title">职场跃迁笔记</h3>
+                    <p class="project-description">
+                        📍【专栏定位】
+5年职场摸爬滚打，沉淀下来的经验
+都是亲身经历，有案例、有方法
+你将见证满怀青涩的大...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 136</span>
+                        <span>文章 已更新 26 篇</span>
+                        <span>价格 ¥59.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/weichong666.html'">
+                <img src="https://static.xiaobot.net/paper/2023-05-06/271012/7f716f9b84298b6063b49f46d938ad81.jpeg" alt="培训师入门与实战手册">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 张伟崇 | PPT培训&设计</span>
+                    </div>
+                    <h3 class="project-title">培训师入门与实战手册</h3>
+                    <p class="project-description">
+                        📍【专栏定位】
+沉淀一线培训实战经验
+
+📖【专栏内容】
+已更新35篇，详情请看专栏提纲，会持续更新！...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 293</span>
+                        <span>文章 已更新 37 篇</span>
+                        <span>价格 ¥78.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="paid" onclick="window.location.href='/p/youjun.html'">
+                <img src="https://static.xiaobot.net/paper/2025-02-03/354167/18c0e4168aa66eb7fd5f825a578b83f0.jpeg" alt="阿里P9右军：20年职业50个思考与洞察">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 右军-786</span>
+                    </div>
+                    <h3 class="project-title">阿里P9右军：20年职业50个思考与洞察</h3>
+                    <p class="project-description">
+                        右军，一位从业20年P9的职业思考：
+
+I 经历了从20人到上千人技术团队 I
+I 技术管理形成自己...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1560</span>
+                        <span>文章 已更新 36 篇</span>
+                        <span>价格 ¥29.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="workplace" data-price="free" onclick="window.location.href='/p/zijianwh.html'">
+                <img src="https://static.xiaobot.net/paper/2023-05-29/275876/388ec0136cfcc30269cacb57f7e5f72f.jpeg" alt="咖啡世界中的奇妙旅途">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            职场
+                        </span>
+                        <span class="project-creator">by 紫葭咖啡倪文辉</span>
+                    </div>
+                    <h3 class="project-title">咖啡世界中的奇妙旅途</h3>
+                    <p class="project-description">
+                        你好，我是倪文辉，上海紫葭咖啡的主理人。我的世界由咖啡以及与咖啡相关的事件组成，这让我的生活变得纯粹...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 0</span>
+                        <span>文章 已更新 157 篇</span>
+                        <span>价格 免费</span>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // 页面加载时检查URL参数
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            const priceParam = urlParams.get('price');
+            const searchParam = urlParams.get('search');
+            
+            // 如果URL有分类参数，选中对应分类
+            if (categoryParam) {
+                const categoryCheck = document.querySelector(`input[name="category"][value="${categoryParam}"]`);
+                if (categoryCheck) {
+                    categoryCheck.checked = true;
+                }
+            }
+            
+            // 如果URL有价格参数，选中对应价格
+            if (priceParam) {
+                const priceRadio = document.querySelector(`input[name="price"][value="${priceParam}"]`);
+                if (priceRadio) {
+                    priceRadio.checked = true;
+                }
+            }
+            
+            // 如果URL有搜索参数，填充搜索框
+            if (searchParam) {
+                document.getElementById('search-input').value = searchParam;
+            }
+            
+            // 应用筛选
+            applyFilters();
+        });
+        
+        // 搜索功能
+        document.getElementById('search-btn').addEventListener('click', function() {
+            performSearch();
+        });
+        
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // 筛选变化时应用筛选
+        document.querySelectorAll('input[name="category"], input[name="price"]').forEach(input => {
+            input.addEventListener('change', applyFilters);
+        });
+        
+        function performSearch() {
+            const searchTerm = document.getElementById('search-input').value.trim();
+            const currentParams = new URLSearchParams(window.location.search);
+            
+            if (searchTerm) {
+                currentParams.set('search', searchTerm);
+            } else {
+                currentParams.delete('search');
+            }
+            
+            // 更新URL
+            window.history.pushState({}, '', `${window.location.pathname}?${currentParams.toString()}`);
+            
+            // 应用筛选
+            applyFilters();
+        }
+        
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+            const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+            const selectedPrice = document.querySelector('input[name="price"]:checked').value;
+            
+            const projectCards = document.querySelectorAll('.project-card');
+            let visibleCount = 0;
+            
+            projectCards.forEach(card => {
+                const category = card.dataset.category;
+                const price = card.dataset.price;
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const creator = card.querySelector('.project-creator').textContent.toLowerCase();
+                
+                // 搜索筛选
+                const matchesSearch = !searchTerm || title.includes(searchTerm) || creator.includes(searchTerm);
+                
+                // 分类筛选
+                const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+                
+                // 价格筛选
+                let matchesPrice = true;
+                if (selectedPrice === 'free') {
+                    matchesPrice = price === 'free';
+                } else if (selectedPrice === 'paid') {
+                    matchesPrice = price === 'paid';
+                }
+                
+                if (matchesSearch && matchesCategory && matchesPrice) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 更新统计
+            document.getElementById('search-stats').textContent = `找到 ${visibleCount} 个专栏`;
+        }
+    </script>
+
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>项目地图驿站</h3>
+                <p>发现优质项目，连接创作者与用户</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/featured">精选</a></li>
+                    <li><a href="/ranking">排行</a></li>
+                    <li><a href="/categories">分类</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>更多</h3>
+                <ul>
+                    <li><a href="/creators">创作者</a></li>
+                    <li><a href="/tags">标签</a></li>
+                    <li><a href="/explore">探索</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">隐私说明</a> | 
+            <a href="/friends.html">友情链接</a> | 
+            <!-- <a href="/sitemap.xml">网站地图</a> -->
+        </div>
+        <div class="copyright">
+            
+                © 2025 项目地图驿站 xmdtyz.com. @xmdtyz.com.
+            
+            
+                <br>备案号：闽ICP备11018667号-2
+            
+            <!-- 本网站初始版本由项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航 开发-->
+        </div>
+    </footer>
+
+    <!-- 悬浮分类菜单 -->
+    <script src="/js/floating-menu-final.js"></script>
+</body>
+</html>
