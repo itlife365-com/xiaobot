@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 公众号爆文创作变现(含指令） - 项目地图驿站</title>
+    <meta name="description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta name="keywords" content="项目地图驿站,优质项目,创作者,技术项目">
+    <meta name="author" content="项目地图驿站">
+    <link rel="canonical" href="https://xmdtyz.com/p/baowen.html">
+    <meta property="og:title" content="AI 公众号爆文创作变现(含指令） - 项目地图驿站">
+    <meta property="og:description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta property="og:url" content="https://xmdtyz.com/p/baowen.html">
+    <meta property="og:type" content="website">
+    
+    <!-- 网站统计代码 -->
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ca86b4e64d755f4afa117488af3fc29d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 8px;
+            width: 70px;
+        }
+
+        .submit-column-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-column-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        
+        /* 项目卡片样式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 15px;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #007bff;
+        }
+        
+        .search-button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 筛选区域 */
+        .filters-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        /* 搜索统计 */
+        .search-stats {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 分类和标签样式 */
+        .categories-list, .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .category-item, .tag-item {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-item:hover, .tag-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* 创作者列表样式 */
+        .creators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .creator-item {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 页脚链接 */
+        .footer-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <!--<img src="https://via.placeholder.com/40" alt="Logo">-->
+                <span class="logo-text">项目地图驿站</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="/">首页</a></li>
+                <li class="nav-item "><a href="/featured">精选</a></li>
+                <li class="nav-item "><a href="/ranking">排行</a></li>
+                <li class="nav-item "><a href="/categories">分类</a></li>
+                <li class="nav-item "><a href="/creators">创作者</a></li>
+                <li class="nav-item "><a href="/tags">标签</a></li>
+                <li class="nav-item "><a href="/explore">探索</a></li>
+                <li class="nav-item "><a href="/about">关于</a></li>
+                <li class="nav-item "><a href="/about">我要想拥有网站</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search-box" action="/categories" method="GET">
+                    <input type="text" name="q" placeholder="搜索项目...">
+                </form>
+                <a href="https://wj.qq.com/s2/25179437/d4f5/" class="submit-column-btn" target="_blank">提交专栏</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="main-content">
+        
+    <!-- 授权检测脚本 -->
+    <script src="/js/local-auth-checker.js"></script>
+    <script src="/js/domain-auth-monitor.js"></script>
+    <script src="/js/authorized-domains.js"></script>
+    
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <a href="/">首页</a> &gt; 
+        <a href="/categories?category=creation">创作</a> &gt; 
+        <span>AI 公众号爆文创作变现(含指令）</span>
+    </div>
+    
+    <!-- 项目标题区域 -->
+    <div class="project-header">
+        <h1 class="project-title">AI 公众号爆文创作变现(含指令）</h1>
+        <span class="project-creator">by 台风-AI魔法师</span>
+    </div>
+    
+    
+    
+    <!-- 项目封面图 -->
+    <div class="project-cover">
+         <a href="https://xiaobot.net/p//baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba"  target="_blank"><img src="https://static.xiaobot.net/paper/2023-11-06/225628/68e89d9c0f9604c412515a6ac9982e14.png" alt="AI 公众号爆文创作变现(含指令）"></a>
+    </div>
+    
+    <!-- 项目详情内容 -->
+    <div class="project-content">
+        <div class="project-info">
+            <h2>项目介绍</h2>
+            <p> <a href="https://xiaobot.net/p//baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba"  target="_blank">公众号推荐流量红利！0粉也有推荐！AI创作爆文只需10分钟，优秀玩家月入1万、甚至年入百万。同步操作头条、百家号，一鱼多吃。
+
+作者：台风(AI魔法师)，GPT任务指令“BRTR原则”作者。AI破局公众号爆文总教练、生财航海GPT教练。AI公众号矩阵粉丝4万+，AI爆文培训营学员500+。
+
+小册包含爆文项目玩法拆解 、爆文AI创作方法等，内含高价值提示指令。
+
+原价299元，限时29.9买断，送AI爆文神器体验卡(100条对话，3天后发放)
+
+福利：AI爆文读者群。加我微信 34662239，发支付截图，拉你进群</a></p>
+            
+            
+            
+            
+            
+            
+            <h2>项目履约承诺</h2>
+            <div class="project-promise">
+                <p>24h 可退</p>
+            </div>
+            
+        </div>
+        
+        <!-- 右侧信息栏 -->
+        <div class="project-sidebar">
+            <div class="sidebar-card">
+                <h3>项目信息</h3>
+                <ul class="info-list">
+                    <li><strong>项目名称:</strong> AI 公众号爆文创作变现(含指令）</li>
+                    <!--<li><strong>创作者:</strong> 台风-AI魔法师</li> -->
+                    <li><strong>分类:</strong> 创作</li>
+                    <li><strong>订阅类型:</strong> 订阅制度</li>
+                    <li><strong>文章数量:</strong> 已更新 38 篇 </li>
+                    <li><strong>免费文章:</strong> 1 篇</li>
+                    <li><strong>已购买订阅读者数:</strong> 2951</li>
+                    <!--<li><strong>点赞数:</strong> None</li> 
+                    <li><strong>订阅人数:</strong> 2951</li>-->
+                    <li><strong>价格:</strong> ¥29.9</li>
+                    <li><strong>价格套餐:</strong> 29.9 报童币/终身</li>
+                    <li><strong>项目作者:</strong> 台风-AI魔法师</li>
+                    <li><strong>开始时间:</strong> 2023-11-06</li>
+                    <!--<li><strong>更新时间:</strong> 未知</li>-->
+                    <li><strong>数据来源:</strong> https://xiaobot.net/p/</li>
+                </ul>
+                
+                <div class="price-section">
+                    <div class="price">
+                        
+                            ¥29.9
+                        
+                    </div>
+                    <!-- 订阅URL -->
+                   
+                    <a href="https://xiaobot.net/p//baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba" class="btn-primary" target="_blank" id="subscribe-btn" data-affiliate-code="e089f22f-05ee-495e-b8f1-261651e48aba" data-default-code="e089f22f-05ee-495e-b8f1-261651e48aba">立即订阅</a>
+                    
+                    <!-- 分享按钮 -->
+                    <div class="share-buttons">
+                        <!-- 页面地址 -->
+                        
+                        <button class="share-btn" onclick="window.open('https://service.weibo.com/share/share.php?url=https://xmdtyz.com/p/baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba&title=AI 公众号爆文创作变现(含指令）', '_blank')" id="share-btn-weibo" data-affiliate-code="e089f22f-05ee-495e-b8f1-261651e48aba">
+                            分享
+                        </button>
+                        <button class="share-btn" onclick="copyLink('https://xmdtyz.com/p/baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba')" id="copy-link-btn" data-affiliate-code="e089f22f-05ee-495e-b8f1-261651e48aba">
+                            复制链接
+                        </button>
+                        <button class="share-btn" onclick="window.open('https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=https://xmdtyz.com/p/baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba', '_blank')" id="share-btn-wechat" data-affiliate-code="e089f22f-05ee-495e-b8f1-261651e48aba">
+                            微信
+                        </button>
+                        <button class="share-btn" onclick="window.open('https://service.weibo.com/share/share.php?url=https://xmdtyz.com/p/baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba&title=AI 公众号爆文创作变现(含指令）', '_blank')" id="share-btn-weibo2" data-affiliate-code="e089f22f-05ee-495e-b8f1-261651e48aba">
+                            微博
+                        </button>
+                    </div>
+                    
+                    <!-- 二维码 -->
+                    <div class="qrcode-section">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://xiaobot.net/p//baowen?refer=e089f22f-05ee-495e-b8f1-261651e48aba" alt="微信扫码订阅" id="qrcode-img">
+                        <p>微信扫码订阅</p>
+                    </div>
+                    
+                    <p class="affiliate-note" id="affiliate-note">通过本链接订阅，您将获得专属优惠</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        function copyLink(url) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert('链接已复制到剪贴板');
+            }).catch(err => {
+                console.error('无法复制链接:', err);
+            });
+        }
+        
+        // 监听授权状态变化，更新affiliate_code
+        window.addEventListener('authorizationChanged', function(event) {
+            const { authorized, affiliateCode } = event.detail;
+            
+            // 更新所有包含affiliate_code的元素
+            const affiliateElements = document.querySelectorAll('[data-affiliate-code]');
+            affiliateElements.forEach(element => {
+                if (authorized) {
+                    // 使用默认的推广码
+                    element.setAttribute('data-affiliate-code', element.getAttribute('data-default-code'));
+                } else {
+                    // 使用未授权的推广码
+                    element.setAttribute('data-affiliate-code', affiliateCode);
+                }
+            });
+            
+            // 更新订阅按钮的href
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            if (subscribeBtn) {
+                const baseUrl = subscribeBtn.href.split('?')[0];
+                const newCode = authorized ? subscribeBtn.getAttribute('data-default-code') : affiliateCode;
+                subscribeBtn.href = baseUrl + '?refer=' + newCode;
+            }
+            
+            // 更新分享按钮的onclick事件
+            const shareBtns = document.querySelectorAll('.share-btn');
+            shareBtns.forEach(btn => {
+                const onclick = btn.getAttribute('onclick');
+                if (onclick) {
+                    const newCode = authorized ? btn.getAttribute('data-default-code') : affiliateCode;
+                    const newOnclick = onclick.replace(/refer=[^&'"]*/g, 'refer=' + newCode);
+                    btn.setAttribute('onclick', newOnclick);
+                }
+            });
+            
+            // 更新二维码
+            const qrcodeImg = document.getElementById('qrcode-img');
+            if (qrcodeImg) {
+                const currentSrc = qrcodeImg.src;
+                const newCode = authorized ? document.getElementById('subscribe-btn').getAttribute('data-default-code') : affiliateCode;
+                const newSrc = currentSrc.replace(/data=[^&]*/, 'data=' + encodeURIComponent(document.getElementById('subscribe-btn').href));
+                qrcodeImg.src = newSrc;
+            }
+            
+            console.log('affiliate_code已更新:', authorized ? '已授权使用默认码' : '未授权使用默认码');
+        });
+        
+        // 页面加载完成后初始化授权检测
+        document.addEventListener('DOMContentLoaded', function() {
+            // 如果授权检测器已加载，立即执行一次检测
+            if (window.domainAuthMonitor) {
+                window.domainAuthMonitor.checkAuthorization();
+            }
+        });
+    </script>
+    
+    <!-- 样式 -->
+    <style>
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .project-header {
+            margin-bottom: 20px;
+        }
+        
+        .project-title {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+        
+        .project-creator {
+            color: #666;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .project-cover {
+            margin: 30px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-height: 700px;
+            overflow: hidden;
+        }
+        
+        .project-cover img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 700px;
+            object-fit: contain;
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-info h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 15px;
+            color: #333;
+        }
+        
+        .project-info p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .project-sidebar {
+            position: sticky;
+            top: 120px;
+            align-self: start;
+        }
+        
+        .sidebar-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .sidebar-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .info-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .info-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .price-section {
+            text-align: center;
+            border-top: 1px solid #eaeaea;
+            padding-top: 20px;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #d32f2f;
+            margin-bottom: 15px;
+        }
+        
+        .btn-primary {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #1976d2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1565c0;
+        }
+        
+        .affiliate-note {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+        
+        /* 分享按钮 */
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .share-btn {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            color: #666;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .share-btn:hover {
+            background-color: #f5f5f5;
+            border-color: #1976d2;
+            color: #1976d2;
+        }
+        
+        /* 二维码 */
+        .qrcode-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .qrcode-section img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+        
+        .qrcode-section p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .project-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-sidebar {
+                position: static;
+            }
+        }
+    </style>
+
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>项目地图驿站</h3>
+                <p>发现优质项目，连接创作者与用户</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/featured">精选</a></li>
+                    <li><a href="/ranking">排行</a></li>
+                    <li><a href="/categories">分类</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>更多</h3>
+                <ul>
+                    <li><a href="/creators">创作者</a></li>
+                    <li><a href="/tags">标签</a></li>
+                    <li><a href="/explore">探索</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">隐私说明</a> | 
+            <a href="/friends.html">友情链接</a> | 
+            <!-- <a href="/sitemap.xml">网站地图</a> -->
+        </div>
+        <div class="copyright">
+            
+                © 2025 项目地图驿站 xmdtyz.com. @xmdtyz.com.
+            
+            
+                <br>备案号：闽ICP备11018667号-2
+            
+            <!-- 本网站初始版本由项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航 开发-->
+        </div>
+    </footer>
+
+    <!-- 悬浮分类菜单 -->
+    <script src="/js/floating-menu-final.js"></script>
+</body>
+</html>
