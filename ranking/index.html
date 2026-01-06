@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目排行 - 项目地图驿站</title>
+    <meta name="description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta name="keywords" content="项目地图驿站,优质项目,创作者,技术项目">
+    <meta name="author" content="项目地图驿站">
+    <link rel="canonical" href="https://xmdtyz.com/ranking">
+    <meta property="og:title" content="项目排行 - 项目地图驿站">
+    <meta property="og:description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta property="og:url" content="https://xmdtyz.com/ranking">
+    <meta property="og:type" content="website">
+    
+    <!-- 网站统计代码 -->
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ca86b4e64d755f4afa117488af3fc29d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 8px;
+            width: 70px;
+        }
+
+        .submit-column-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-column-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        
+        /* 项目卡片样式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 15px;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #007bff;
+        }
+        
+        .search-button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 筛选区域 */
+        .filters-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        /* 搜索统计 */
+        .search-stats {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 分类和标签样式 */
+        .categories-list, .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .category-item, .tag-item {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-item:hover, .tag-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* 创作者列表样式 */
+        .creators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .creator-item {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 页脚链接 */
+        .footer-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <!--<img src="https://via.placeholder.com/40" alt="Logo">-->
+                <span class="logo-text">项目地图驿站</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="/">首页</a></li>
+                <li class="nav-item "><a href="/featured">精选</a></li>
+                <li class="nav-item active"><a href="/ranking">排行</a></li>
+                <li class="nav-item "><a href="/categories">分类</a></li>
+                <li class="nav-item "><a href="/creators">创作者</a></li>
+                <li class="nav-item "><a href="/tags">标签</a></li>
+                <li class="nav-item "><a href="/explore">探索</a></li>
+                <li class="nav-item "><a href="/about">关于</a></li>
+                <li class="nav-item "><a href="/about">我要想拥有网站</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search-box" action="/categories" method="GET">
+                    <input type="text" name="q" placeholder="搜索项目...">
+                </form>
+                <a href="https://wj.qq.com/s2/25179437/d4f5/" class="submit-column-btn" target="_blank">提交专栏</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="main-content">
+        
+    <!-- 热门专栏区域 -->
+    <section class="hot-projects">
+        <div class="section-header">
+            <div class="section-title">
+                <h2>项目排行</h2>
+                <p>根据浏览量和人气排名的优质项目</p>
+            </div>
+        </div>
+        <div class="projects-grid">
+            
+                <div class="project-card" onclick="window.location.href='/p/mediabuy.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-04-28/115347/6ba0b154f27e595bb25b89d6a101a43e.png" alt="AI海外赚钱">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 静水流深</span>
+                        </div>
+                        <h3 class="project-title">AI海外赚钱</h3>
+                        <p class="project-description">
+                            静水流深，国外赚美元的奠基人，上个世纪就开始出海赚美元，雷军的师弟，如今投入AI领域，帮助大家利用A...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 16263</span>
+                            <span>文章 已更新 229 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/XF888.html'">
+                    <img src="https://static.xiaobot.net/paper/2025-05-08/119929/be699f459b200266cb4d4f576b1f2aa7.jpeg" alt="水龙手把手带你自媒体入门">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                指南
+                            </span>
+                            <span class="project-creator">by 1102-水龙</span>
+                        </div>
+                        <h3 class="project-title">水龙手把手带你自媒体入门</h3>
+                        <p class="project-description">
+                            作者简介：
+
+水龙，热爱创业的96后，实体转型自媒体，年入百万，目前全职自媒体，素人IP私域商业化教...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 10654</span>
+                            <span>文章 已更新 2 篇</span>
+                            <span>价格 免费</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/DaQuanPrompter.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-10/274587/80881dac98d867fa357c5bfe5f5d6645.png" alt="AI 入门到变现（DeepSeek）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 大全带您学AI</span>
+                        </div>
+                        <h3 class="project-title">AI 入门到变现（DeepSeek）</h3>
+                        <p class="project-description">
+                            作者大全：万人AI破局教练，211大学法学毕业，跨行自学编程，北漂10年，前BAT大厂架构师，月入1...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 10248</span>
+                            <span>文章 已更新 77 篇</span>
+                            <span>价格 19.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/xb499299.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-03-06/119920/b3c64adfceb0443c87af6ded8e6d82ab.jpeg" alt="AI代写">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 饭饭是个闲人</span>
+                        </div>
+                        <h3 class="project-title">AI代写</h3>
+                        <p class="project-description">
+                            作者饭饭：国内最大的AI社群—AI破局初创合伙人，AI破局俱乐部航海教练。担任过各大头部社群实战嘉宾...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 9383</span>
+                            <span>文章 已更新 57 篇</span>
+                            <span>价格 29.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/ziyouzhiye.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-02-25/16551/a9164530d620ff76b80be5ab871d74cc.png" alt="自由职业0-100w指南大全">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by 赵立心</span>
+                        </div>
+                        <h3 class="project-title">自由职业0-100w指南大全</h3>
+                        <p class="project-description">
+                            作者赵立心：前大厂产品经理，裸辞自由职业2年。辞职半年打平原收入，毕业4年实现月入六位数。擅长帮助职...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 9371</span>
+                            <span>文章 已更新 166 篇</span>
+                            <span>价格 14.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-10-28/8632/2cc29b335bcde737bfa5271aa9a789a9.jpeg" alt="纯银的 60 篇产品分析 · 第二季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第二季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 8174</span>
+                            <span>文章 已更新 60 篇</span>
+                            <span>价格 39.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs3.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-10-28/8632/3dfbb194bfe1571ca2cf2ac41e2940b9.jpeg" alt="纯银的 60 篇产品分析 · 第三季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第三季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 7934</span>
+                            <span>文章 已更新 60 篇</span>
+                            <span>价格 59.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs1.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-10-27/8632/f062ec49d788c9429bfd5c76271eebb4.jpeg" alt="纯银的 60 篇产品分析 · 第一季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第一季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 6932</span>
+                            <span>文章 已更新 60 篇</span>
+                            <span>价格 39.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/kevin888.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-05-24/211314/8ba18f57b562ec7703e8cbf5d2a1c2b4.jpeg" alt="私域赚钱一本通">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by 私域文姐</span>
+                        </div>
+                        <h3 class="project-title">私域赚钱一本通</h3>
+                        <p class="project-description">
+                            全文共127篇，12万字！置顶【进群】还有惊喜奖励！
+
+私域文姐，不销而销私域教练，纯素人起盘AI私...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 6783</span>
+                            <span>文章 已更新 135 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmthinking2023.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-12-31/5/82c8c49f1004d4c44fd6e1edc62a707a.png" alt="产品沉思录 | 第七季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by shaonan × fonter</span>
+                        </div>
+                        <h3 class="project-title">产品沉思录 | 第七季</h3>
+                        <p class="project-description">
+                            产品沉思录™ 是一个关于产品的知识库，也是一个 Newsletter （邮件组），始于 2017 年...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 6094</span>
+                            <span>文章 已更新 56 篇</span>
+                            <span>价格 99.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/fly100.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-02/77736/7ca4b1a9173aa4e2dc2c38a1773c2f2f.jpeg" alt="100种互联网热门赚钱方法">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by 纯洁的微笑</span>
+                        </div>
+                        <h3 class="project-title">100种互联网热门赚钱方法</h3>
+                        <p class="project-description">
+                            最新、最热的互联网赚钱项目拆解，向有结果的人拿答案。
+
+(连载中，每月更新 1-2 篇，随时涨价！)...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 6089</span>
+                            <span>文章 已更新 71 篇</span>
+                            <span>价格 19.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/card.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-10-31/5843/a09cc35c4c886f1ee0d9b15ce06c02c2.png" alt="笔记的方法（已完结）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                笔记
+                            </span>
+                            <span class="project-creator">by flomo Team</span>
+                        </div>
+                        <h3 class="project-title">笔记的方法（已完结）</h3>
+                        <p class="project-description">
+                            由 flomo 团队出品，感谢大家支持，实体书已经上市，在当当网、得到 App 内搜索《笔记的方法》...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 6043</span>
+                            <span>文章 已更新 40 篇</span>
+                            <span>价格 免费</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs4.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-02-27/8632/2f43fa26ee2a0af0b282761724d58cb7.jpeg" alt="纯银的 60 篇产品分析 · 第四季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第四季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 5295</span>
+                            <span>文章 已更新 61 篇</span>
+                            <span>价格 59.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs5.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-06-24/8632/e25ffeae0bb4fa81f7679d829088d453.jpeg" alt="纯银的 60 篇产品分析 · 第五季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第五季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4952</span>
+                            <span>文章 已更新 60 篇</span>
+                            <span>价格 59.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmthinking2022.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-12-31/5/76e64a7a4daa5b97e5643aef08e7e35f.jpeg" alt="产品沉思录 | 第六季（完结）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by shaonan × fonter</span>
+                        </div>
+                        <h3 class="project-title">产品沉思录 | 第六季（完结）</h3>
+                        <p class="project-description">
+                            产品沉思录™ 是一个关于产品的知识库，也是一个 Newsletter （邮件组），始于 2017 年...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4881</span>
+                            <span>文章 已更新 52 篇</span>
+                            <span>价格 99.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/juexing01.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-10-13/364979/664fcd61fdf26db588de9dc3f3e31969.jpeg" alt="自媒体百万粉丝指南">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                指南
+                            </span>
+                            <span class="project-creator">by 阿猫</span>
+                        </div>
+                        <h3 class="project-title">自媒体百万粉丝指南</h3>
+                        <p class="project-description">
+                            7年觉醒合伙人共创产品。
+
+阿猫全平台粉丝有100万，主营公众号。  
+觉醒合伙人领域有头条、小红书...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4828</span>
+                            <span>文章 已更新 100 篇</span>
+                            <span>价格 69.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/books.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-06-14/61313/99df2c26a690ea6c8b66bd126a8fb227.jpeg" alt="手把手教你海外赚钱">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by Sitin彭涛</span>
+                        </div>
+                        <h3 class="project-title">手把手教你海外赚钱</h3>
+                        <p class="project-description">
+                            二两，独立开发30+产品，每月躺赚2万+美金
+维维舟，前字节工程师，多款APP、插件开发者
+彭涛，创...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4788</span>
+                            <span>文章 已更新 101 篇</span>
+                            <span>价格 39.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/aiyanjiu.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-02-02/910/22380333939d26c59874ac499b90e119.jpeg" alt="AI项目商业解析">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 王凯</span>
+                        </div>
+                        <h3 class="project-title">AI项目商业解析</h3>
+                        <p class="project-description">
+                            1、AI 改变世界
+本专栏是时间最早、好评率较高的 AI 领域专栏，目前订阅人数近 5000 人，是...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4696</span>
+                            <span>文章 已更新 124 篇</span>
+                            <span>价格 66.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/yang.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-06-21/61324/c3d46a9475fe25834fe44d000d1c4676.jpeg" alt="写作与 AI 写作变现">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 闫小林</span>
+                        </div>
+                        <h3 class="project-title">写作与 AI 写作变现</h3>
+                        <p class="project-description">
+                            作者小林：数字游民，爬过珠峰，日更写作 7 年，本专栏是精心打磨的作品。
+
+已更 328 篇，16 ...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4649</span>
+                            <span>文章 已更新 328 篇</span>
+                            <span>价格 19.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/77prompt.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-09-24/273931/726c9f5632bb21bfe48953ef24edfe55.png" alt="小七姐的 AI 提示词">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 小七姐</span>
+                        </div>
+                        <h3 class="project-title">小七姐的 AI 提示词</h3>
+                        <p class="project-description">
+                            专栏作者：小七姐， 13 年产品经理，微软 / ZelinAI 企业服务合作提示词工程师，AI 开源...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4490</span>
+                            <span>文章 已更新 41 篇</span>
+                            <span>价格 99.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmthinking2020.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-12-31/5/90088875701113485473f525dbe0d1d2.jpeg" alt="产品沉思录 | 第四季（完结）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by shaonan × fonter</span>
+                        </div>
+                        <h3 class="project-title">产品沉思录 | 第四季（完结）</h3>
+                        <p class="project-description">
+                            产品沉思录™ 是一个关于产品的知识库，也是一个 Newsletter （邮件组），始于 2017 年...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4278</span>
+                            <span>文章 已更新 42 篇</span>
+                            <span>价格 99.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmthinking2021.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-12-31/5/670b34eecd655e441f7e583aede63198.jpeg" alt="产品沉思录 | 第五季（完结）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by shaonan × fonter</span>
+                        </div>
+                        <h3 class="project-title">产品沉思录 | 第五季（完结）</h3>
+                        <p class="project-description">
+                            产品沉思录™ 是一个关于产品的知识库，也是一个 Newsletter （邮件组），始于 2017 年...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4242</span>
+                            <span>文章 已更新 51 篇</span>
+                            <span>价格 99.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/1234569.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-17/284144/1e66a7386ab79e8ae322b38d2ef1c4c4.png" alt="AI数字人从制作到变现">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by findyi</span>
+                        </div>
+                        <h3 class="project-title">AI数字人从制作到变现</h3>
+                        <p class="project-description">
+                            作者 findyi，江湖人称洋哥，全国最大的 AI 付费星球--AI 破局俱乐部主理人，已经汇集了超...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4078</span>
+                            <span>文章 已更新 31 篇</span>
+                            <span>价格 19.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/finfyi321.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-01/284144/b3905d4473492c45f4d2c7ed3849ac72.jpeg" alt="编程与 AI 编程">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by findyi</span>
+                        </div>
+                        <h3 class="project-title">编程与 AI 编程</h3>
+                        <p class="project-description">
+                            2.8 万付费社群 AI 破局俱乐部共创小册：作者有架构师、技术负责人、大厂程序员等，旨在帮助程序员...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4055</span>
+                            <span>文章 已更新 200 篇</span>
+                            <span>价格 29.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/321456.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-08/284144/cb552823acbd64c1cc5fb6d503ce4ae6.jpeg" alt="AI赚钱的100种思路（含指令）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by findyi</span>
+                        </div>
+                        <h3 class="project-title">AI赚钱的100种思路（含指令）</h3>
+                        <p class="project-description">
+                            3.9 万付费社群 AI 破局俱乐部精选 100 种 AI 赚钱方法。
+
+小册包含 AI 绘画赚钱方...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 4009</span>
+                            <span>文章 已更新 68 篇</span>
+                            <span>价格 29.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/yibentong.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-08-31/23049/18e55aabdb07f7d7b4b9bf9960536327.jpeg" alt="AI 绘画一本通（365个AI绘画案例）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by Sky🏹</span>
+                        </div>
+                        <h3 class="project-title">AI 绘画一本通（365个AI绘画案例）</h3>
+                        <p class="project-description">
+                            AI 绘画师日记（365个案例精选）由100多位创作者花费100多天时间共创而来。而这些创作者都是来...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3961</span>
+                            <span>文章 已更新 233 篇</span>
+                            <span>价格 99.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/xbt.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-06-11/7466/dbfbda247a7ccf7c32f3a6914b6946c4.jpeg" alt="小报童商业化·赚钱案例库">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                案例库
+                            </span>
+                            <span class="project-creator">by IDO老徐</span>
+                        </div>
+                        <h3 class="project-title">小报童商业化·赚钱案例库</h3>
+                        <p class="project-description">
+                            如果你是 IP、副业、内容付费、轻创业、私域 等，绕不开这个专栏。没订阅的，大概率会走很多弯路。
+
+...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3848</span>
+                            <span>文章 已更新 117 篇</span>
+                            <span>价格 19.99</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/xhs.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-06-24/7466/c9e301d3dfd32a076c06f9c517a59e2b.png" alt="小红书可复制案例库2024">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                案例库
+                            </span>
+                            <span class="project-creator">by IDO老徐</span>
+                        </div>
+                        <h3 class="project-title">小红书可复制案例库2024</h3>
+                        <p class="project-description">
+                            别人笔记几千几万赞，商业化收入不断，你的笔记没人看
+
+我是IDO老徐，帮你手工精选了 220 个小红...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3832</span>
+                            <span>文章 已更新 247 篇</span>
+                            <span>价格 免费</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/xuan626.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-18/193437/57ef462b753cd1017e0809d8a1bc35fc.jpeg" alt="视频号IP直播带货卖课变现">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by 旋子</span>
+                        </div>
+                        <h3 class="project-title">视频号IP直播带货卖课变现</h3>
+                        <p class="project-description">
+                            视频号头部玩家，生财航海教练，半年200万 gmv，利润70W+。
+100个账号，搭过30多个直播间...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3769</span>
+                            <span>文章 已更新 111 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/chatai666.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-06-28/271179/d932b3bac5895487347ef7a81afdfc9c.png" alt="小白的AI编程提效课">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 峰兄</span>
+                        </div>
+                        <h3 class="project-title">小白的AI编程提效课</h3>
+                        <p class="project-description">
+                            本专栏由小米、百度、阿里等互联网大厂的AI业务相关高管共创，专注于普通人的AI提效，提高程序员群体的...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3658</span>
+                            <span>文章 已更新 41 篇</span>
+                            <span>价格 28.8</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs6.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-10-25/8632/4a9180963aae98c6d70c3784f2963a2e.jpeg" alt="纯银的 60 篇产品分析 · 第六季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第六季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3608</span>
+                            <span>文章 已更新 60 篇</span>
+                            <span>价格 59.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/chat.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-06-14/7466/ac0b6f30cf9a044f0bc804013ba58fc5.jpeg" alt="用AI大模型零成本赚小钱">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by IDO老徐</span>
+                        </div>
+                        <h3 class="project-title">用AI大模型零成本赚小钱</h3>
+                        <p class="project-description">
+                            1. 独家更新 200 篇AI商业思考，零成本赚小钱（信息差 + 时间差 + 执行力）
+2. 内容板...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3568</span>
+                            <span>文章 已更新 159 篇</span>
+                            <span>价格 66.66</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/Jiang-AIGC.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-17/287894/db48e9149d10e6f29c2530d9a5617532.jpeg" alt="100款好用的AI工具">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 江工陪您学AI</span>
+                        </div>
+                        <h3 class="project-title">100款好用的AI工具</h3>
+                        <p class="project-description">
+                            一次搞定 100 个好用的 AI 工具库，手把手实操截图
+
+好用的AI工具，不仅能提效，还能帮你赚到...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3451</span>
+                            <span>文章 已更新 104 篇</span>
+                            <span>价格 19.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/rpa2024.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-15/244788/804b2ef7cdf284bfa88132c281f19df1.jpeg" alt="自媒体自动化提效RPA实战指南">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by 伟豪</span>
+                        </div>
+                        <h3 class="project-title">自媒体自动化提效RPA实战指南</h3>
+                        <p class="project-description">
+                            本小册为伟豪、明鉴、福哥共创，AI破局初创合伙人，AI破局俱乐部RPA教练，服务2000+学员，帮助...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3444</span>
+                            <span>文章 已更新 45 篇</span>
+                            <span>价格 12.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/paoye365.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-12-25/61382/5199feea075aed7c1a8e00bebe3ee4a5.jpeg" alt="百万千万级项目操盘指南">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                项目
+                            </span>
+                            <span class="project-creator">by 炮爷(不睡觉)</span>
+                        </div>
+                        <h3 class="project-title">百万千万级项目操盘指南</h3>
+                        <p class="project-description">
+                            【详情请看置顶帖】
+本专栏作者为「创富合伙人」和「海外高端旅游实战营」两位主理人炮爷和傅超人。
+
+旨...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3432</span>
+                            <span>文章 已更新 27 篇</span>
+                            <span>价格 19.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/link100.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-06-14/390406/a8db882a8bcbfaac0af6b8e947d59ade.png" alt="AI视频案例（100个爆款拆解）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by Link羊羊</span>
+                        </div>
+                        <h3 class="project-title">AI视频案例（100个爆款拆解）</h3>
+                        <p class="project-description">
+                            【小册共 3 部分内容】
+100 个 AI视频爆款案例的拆解；
+AI 视频工具的教学；
+AI 自媒体...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3300</span>
+                            <span>文章 已更新 121 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/notworking.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-12-31/147626/fe4547f617073a94d60490e5af0dfb0f.jpeg" alt="不是办法">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                阅读
+                            </span>
+                            <span class="project-creator">by 中二怪</span>
+                        </div>
+                        <h3 class="project-title">不是办法</h3>
+                        <p class="project-description">
+                            你好呀，如果你也底层乐观，相信虽然也许没有正确答案，但是在某些瞬间，可以非常接近，那我想，也许你会喜...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3240</span>
+                            <span>文章 已更新 99 篇</span>
+                            <span>价格 399.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/xiaolin.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-13/61324/5d0be5c6bde6fa04eaf7d6fdf93617a6.jpeg" alt="ChatGPT 实操案例">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                ChatGPT
+                            </span>
+                            <span class="project-creator">by 闫小林</span>
+                        </div>
+                        <h3 class="project-title">ChatGPT 实操案例</h3>
+                        <p class="project-description">
+                            本专栏已更新完毕。
+
+4400 订阅写作与 AI 写作专栏：www.xiaobot.net
+
+110...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3181</span>
+                            <span>文章 已更新 103 篇</span>
+                            <span>价格 免费</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/juexingguihua.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-02-06/67777/ac9cef6369fbbfb5ba632998943e7f71.jpeg" alt="100本百万财富书单">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                阅读
+                            </span>
+                            <span class="project-creator">by 鱼堂主</span>
+                        </div>
+                        <h3 class="project-title">100本百万财富书单</h3>
+                        <p class="project-description">
+                            觉醒合伙人共创专栏，每人推荐3本最“赚钱”的书籍，2024年推荐100本，读完少走3年弯路。
+包括纳...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3127</span>
+                            <span>文章 已更新 100 篇</span>
+                            <span>价格 39.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/ying520323.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-01/178383/df51bb7bf159866660a1aa77501eed71.jpeg" alt="朋友圈与 AI 朋友圈变现">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                技术
+                            </span>
+                            <span class="project-creator">by 坏脾气小可爱</span>
+                        </div>
+                        <h3 class="project-title">朋友圈与 AI 朋友圈变现</h3>
+                        <p class="project-description">
+                            作者：坏脾气的小可爱，2022 年收入不到 10 万，2023 通过朋友圈年入 50 万，极其擅长私...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3097</span>
+                            <span>文章 已更新 61 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/pmdogs7.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-03-07/8632/b766a34bbeb37999ad49e7b2e6d4ce6e.jpeg" alt="纯银的 60 篇产品分析 · 第七季">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 纯银</span>
+                        </div>
+                        <h3 class="project-title">纯银的 60 篇产品分析 · 第七季</h3>
+                        <p class="project-description">
+                            新购用户建议火速申请退款，最新的「无限季」购买后，赠送第一二三四五六七季。详情请看：xiaobot....
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3087</span>
+                            <span>文章 已更新 60 篇</span>
+                            <span>价格 59.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/podcast001.html'">
+                    <img src="https://static.xiaobot.net/paper/2022-12-17/30378/1c15182b170783938b3cc1706f6ec135.png" alt="你的第一本播客制作指南">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                播客
+                            </span>
+                            <span class="project-creator">by 旺仔珂珂糖</span>
+                        </div>
+                        <h3 class="project-title">你的第一本播客制作指南</h3>
+                        <p class="project-description">
+                            hi，我是《末日狂花》、《消费圈内人》和前《温柔一刀》的制作人旺仔珂珂糖。
+我对本册子的定位是：最简...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3074</span>
+                            <span>文章 已更新 23 篇</span>
+                            <span>价格 258.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/findyi123.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-03/284144/a5b08da698d6ea05754fbaa6c5ea8024.jpeg" alt="个人IP从入门到变现">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                职场
+                            </span>
+                            <span class="project-creator">by findyi</span>
+                        </div>
+                        <h3 class="project-title">个人IP从入门到变现</h3>
+                        <p class="project-description">
+                            作者 findyi，江湖人称洋哥，AI破局俱乐部主理人，互联网从业15年。
+
+公众号、知乎积累读者5...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 3049</span>
+                            <span>文章 已更新 52 篇</span>
+                            <span>价格 29.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/baowen.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-06/225628/68e89d9c0f9604c412515a6ac9982e14.png" alt="AI 公众号爆文创作变现(含指令）">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                创作
+                            </span>
+                            <span class="project-creator">by 台风-AI魔法师</span>
+                        </div>
+                        <h3 class="project-title">AI 公众号爆文创作变现(含指令）</h3>
+                        <p class="project-description">
+                            公众号推荐流量红利！0粉也有推荐！AI创作爆文只需10分钟，优秀玩家月入1万、甚至年入百万。同步操作...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2951</span>
+                            <span>文章 已更新 38 篇</span>
+                            <span>价格 29.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/ML100.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-21/270957/af67301af177a109ed4572e0e38077d5.jpeg" alt="【全面讲透】200个超强机器学习模型">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by cos大壮</span>
+                        </div>
+                        <h3 class="project-title">【全面讲透】200个超强机器学习模型</h3>
+                        <p class="project-description">
+                            你好，我是cos大壮，联合另外两位大厂算法大佬，发布了《100个超强机器学习算法模型》！
+
+从202...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2919</span>
+                            <span>文章 已更新 1 篇</span>
+                            <span>价格 49.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/IPcat.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-22/72922/2fc1c3048bfde675388332e1a447ae54.jpeg" alt="阿猫的自媒体底层心法">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                产品
+                            </span>
+                            <span class="project-creator">by 阿猫</span>
+                        </div>
+                        <h3 class="project-title">阿猫的自媒体底层心法</h3>
+                        <p class="project-description">
+                            专栏包括4大板块：
+1/认知篇：重构认知，精准避坑，少走弯路
+2/内容篇：把握内容关键，扎牢自媒体基...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2910</span>
+                            <span>文章 已更新 61 篇</span>
+                            <span>价格 39.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/xuyansuitan.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-20/125742/a68f2e9c962271066487e1874700cf99.jpeg" alt="玩赚今日头条">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 徐言</span>
+                        </div>
+                        <h3 class="project-title">玩赚今日头条</h3>
+                        <p class="project-description">
+                            作者徐言随谈: 今日头条微头条专栏销量全平台第一，微头条千万加爆文十几篇，百万加爆文300多篇，带货...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2909</span>
+                            <span>文章 已更新 122 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/laoma.html'">
+                    <img src="https://static.xiaobot.net/paper/2023-11-14/114300/8bf42e83611a8c2211adf94e68450005.jpeg" alt="手把手教你建社群赚钱">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                副业
+                            </span>
+                            <span class="project-creator">by 老马</span>
+                        </div>
+                        <h3 class="project-title">手把手教你建社群赚钱</h3>
+                        <p class="project-description">
+                            专栏一句话介绍：老马生财陪伴群最全最细SOP，拿了就能用的实操手册。
+
+老马今年做陪伴群，门票变现1...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2855</span>
+                            <span>文章 已更新 28 篇</span>
+                            <span>价格 39.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/qq13401616.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-01-18/8959/094b6d00fb327f24560800b783e3a503.jpeg" alt="100个100万+公众号爆文案例">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                案例库
+                            </span>
+                            <span class="project-creator">by 赵半仙</span>
+                        </div>
+                        <h3 class="project-title">100个100万+公众号爆文案例</h3>
+                        <p class="project-description">
+                            公众号爆文，八仙过海，各有不同。失败爆文，读者无感。成功案例，最有说服力！
+
+1.由爆文最高月入5位...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2808</span>
+                            <span>文章 已更新 220 篇</span>
+                            <span>价格 10.0</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="project-card" onclick="window.location.href='/p/six_seven.html'">
+                    <img src="https://static.xiaobot.net/paper/2024-03-06/483549/e6c0310cfe12b20880cb51c3e7d16ff7.jpeg" alt="AI+公众号爆文写作">
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">
+                                AI
+                            </span>
+                            <span class="project-creator">by 七哥Seven</span>
+                        </div>
+                        <h3 class="project-title">AI+公众号爆文写作</h3>
+                        <p class="project-description">
+                            作者七哥：前京东程序员，百万爆款创作者，累计运营账号1000+，流量主变现50W
+
+目前公众号释放公...
+                        </p>
+                        <div class="project-stats">
+                            <span>订阅人数 2788</span>
+                            <span>文章 已更新 48 篇</span>
+                            <span>价格 19.9</span>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>项目地图驿站</h3>
+                <p>发现优质项目，连接创作者与用户</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/featured">精选</a></li>
+                    <li><a href="/ranking">排行</a></li>
+                    <li><a href="/categories">分类</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>更多</h3>
+                <ul>
+                    <li><a href="/creators">创作者</a></li>
+                    <li><a href="/tags">标签</a></li>
+                    <li><a href="/explore">探索</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">隐私说明</a> | 
+            <a href="/friends.html">友情链接</a> | 
+            <!-- <a href="/sitemap.xml">网站地图</a> -->
+        </div>
+        <div class="copyright">
+            
+                © 2025 项目地图驿站 xmdtyz.com. @xmdtyz.com.
+            
+            
+                <br>备案号：闽ICP备11018667号-2
+            
+            <!-- 本网站初始版本由项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航 开发-->
+        </div>
+    </footer>
+
+    <!-- 悬浮分类菜单 -->
+    <script src="/js/floating-menu-final.js"></script>
+</body>
+</html>

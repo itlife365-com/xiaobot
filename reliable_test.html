@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可靠脚本执行测试</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 50px;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .info {
+            background: rgba(255,255,255,0.15);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .status {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-family: monospace;
+        }
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            border-left: 4px solid #00b894;
+        }
+        .waiting { border-left-color: #fdcb6e; }
+        .success { border-left-color: #00b894; }
+        .error { border-left-color: #e17055; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 可靠脚本执行测试</h1>
+        
+        <div class="info">
+            <h2>📋 测试流程：</h2>
+            <div class="step waiting" id="step1">⏳ 1. 等待脚本加载...</div>
+            <div class="step waiting" id="step2">⏳ 2. 等待DOM准备就绪...</div>
+            <div class="step waiting" id="step3">⏳ 3. 等待创建调试指示器...</div>
+            <div class="step waiting" id="step4">⏳ 4. 等待创建悬浮按钮...</div>
+            <div class="step waiting" id="step5">⏳ 5. 等待完成所有测试...</div>
+        </div>
+        
+        <div class="info">
+            <h3>🎮 交互测试：</h3>
+            <p>如果脚本执行成功，你将看到：</p>
+            <ul>
+                <li>右上角出现红色调试指示器</li>
+                <li>2秒后右下角出现蓝色渐变悬浮按钮</li>
+                <li>调试指示器变为绿色</li>
+                <li>点击悬浮按钮会弹出成功提示</li>
+            </ul>
+        </div>
+        
+        <div class="status" id="status">
+            <h3>📊 执行状态：</h3>
+            <div id="statusContent">初始化中...</div>
+        </div>
+    </div>
+
+    <script>
+        // 测试页面脚本
+        console.log('📋 测试页面脚本开始执行');
+        const statusContent = document.getElementById('statusContent');
+        let stepCount = 0;
+        
+        // 监控步骤完成
+        function updateStep(stepId, status, message) {
+            const step = document.getElementById(stepId);
+            if (step) {
+                step.className = `step ${status}`;
+                step.innerHTML = message;
+            }
+        }
+        
+        // 更新状态
+        function updateStatus(message) {
+            statusContent.innerHTML += `<div style="margin: 5px 0; color: #74b9ff;">${new Date().toLocaleTimeString()} - ${message}</div>`;
+            console.log('📊 状态更新:', message);
+        }
+        
+        // 页面加载完成
+        window.addEventListener('load', () => {
+            console.log('✅ 页面加载完成');
+            updateStep('step1', 'success', '✅ 1. 页面加载完成');
+            updateStatus('页面加载完成，开始监控脚本执行...');
+            
+            // 监控脚本执行
+            monitorScriptExecution();
+        });
+        
+        // 监控脚本执行
+        function monitorScriptExecution() {
+            updateStep('step2', 'success', '✅ 2. 开始监控DOM状态...');
+            updateStatus('开始监控DOM状态变化...');
+            
+            // 监听DOM变化
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
+                            // 检查调试指示器
+                            if (node.id === 'debugIndicator' || (node.style && node.style.position === 'fixed' && node.style.top === '10px')) {
+                                updateStep('step3', 'success', '✅ 3. 调试指示器已创建！');
+                                updateStatus('检测到调试指示器已创建！');
+                            }
+                            
+                            // 检查悬浮按钮
+                            if (node.style && node.style.position === 'fixed' && node.style.bottom === '30px') {
+                                updateStep('step4', 'success', '✅ 4. 悬浮按钮已创建！');
+                                updateStatus('检测到悬浮按钮已创建！');
+                                
+                                setTimeout(() => {
+                                    updateStep('step5', 'success', '✅ 5. 所有测试步骤完成！');
+                                    updateStatus('🎉 所有测试步骤完成！脚本执行成功！');
+                                }, 1000);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+            
+            // 设置超时
+            setTimeout(() => {
+                if (stepCount < 4) {
+                    updateStatus('⚠️ 测试超时，请检查脚本是否正确执行');
+                }
+            }, 10000);
+        }
+    </script>
+    
+    <!-- 引用可靠的悬浮菜单脚本 -->
+    <script src="/js/floating-menu-reliable.js"></script>
+</body>
+</html>

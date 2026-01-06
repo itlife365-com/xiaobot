@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 悬浮分类菜单 - 最终测试</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .feature-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-desc {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .test-instructions {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .test-instructions h2 {
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .instruction-list {
+            list-style: none;
+            counter-reset: step-counter;
+        }
+        
+        .instruction-list li {
+            counter-increment: step-counter;
+            margin-bottom: 20px;
+            padding-left: 60px;
+            position: relative;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .instruction-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(135deg, #00b894, #00a085);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .status-panel {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .status-title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #74b9ff;
+            font-weight: 600;
+        }
+        
+        .status-item {
+            margin: 10px 0;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #74b9ff;
+        }
+        
+        .success {
+            border-left-color: #00b894;
+            background: rgba(0, 184, 148, 0.2);
+        }
+        
+        .warning {
+            border-left-color: #fdcb6e;
+            background: rgba(253, 203, 110, 0.2);
+        }
+        
+        .error {
+            border-left-color: #e17055;
+            background: rgba(225, 112, 85, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .instruction-list li {
+                padding-left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 悬浮分类菜单</h1>
+            <p>功能完整、设计精美的悬浮式分类导航组件</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">响应式设计</div>
+                <div class="feature-desc">自适应各种屏幕尺寸，在移动设备和桌面端都有完美的显示效果</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">流畅动画</div>
+                <div class="feature-desc">平滑的展开收起动画，提供优雅的用户交互体验</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">美观界面</div>
+                <div class="feature-desc">现代化的设计风格，支持渐变色彩和精美的图标</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <div class="feature-title">功能完整</div>
+                <div class="feature-desc">包含数据加载、分类展示、事件处理等完整功能</div>
+            </div>
+        </div>
+        
+        <div class="test-instructions">
+            <h2>🧪 测试指南</h2>
+            <ol class="instruction-list">
+                <li>查看页面右上角是否出现调试指示器（蓝色提示框）</li>
+                <li>观察右下角是否出现悬浮按钮（蓝色圆形按钮）</li>
+                <li>点击悬浮按钮，查看分类菜单是否正常展开</li>
+                <li>测试分类项目点击功能</li>
+                <li>验证关闭按钮和遮罩层点击功能</li>
+                <li>测试ESC键关闭功能</li>
+                <li>检查移动端响应式效果</li>
+            </ol>
+        </div>
+        
+        <div class="status-panel">
+            <div class="status-title">📊 执行状态监控</div>
+            <div id="statusMonitor">
+                <div class="status-item">⏳ 等待脚本加载...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 状态监控脚本
+        const statusMonitor = document.getElementById('statusMonitor');
+        let logCount = 0;
+        
+        function addStatus(message, type = 'info') {
+            const time = new Date().toLocaleTimeString();
+            const item = document.createElement('div');
+            item.className = `status-item ${type}`;
+            item.innerHTML = `${time} - ${message}`;
+            statusMonitor.appendChild(item);
+            logCount++;
+            
+            // 保持最新的10条记录
+            if (logCount > 10) {
+                statusMonitor.removeChild(statusMonitor.firstElementChild);
+                logCount--;
+            }
+            
+            // 滚动到底部
+            statusMonitor.scrollTop = statusMonitor.scrollHeight;
+        }
+        
+        // 监控页面加载
+        window.addEventListener('load', () => {
+            addStatus('✅ 页面加载完成', 'success');
+            startMonitoring();
+        });
+        
+        // 开始监控
+        function startMonitoring() {
+            addStatus('🔍 开始监控DOM变化...', 'info');
+            
+            // 监听调试指示器
+            const debugObserver = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    mutation.addedNodes.forEach((node) => {
+                        if (node.nodeType === Node.ELEMENT_NODE) {
+                            if (node.id === 'floatingMenuDebug') {
+                                addStatus('🎯 检测到调试指示器已创建', 'success');
+                            }
+                        }
+                    });
+                });
+            });
+            
+            debugObserver.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+            
+            // 检查悬浮菜单元素
+            setTimeout(() => {
+                const floatingBtn = document.querySelector('.floating-btn');
+                const dropdown = document.querySelector('.category-dropdown');
+                
+                if (floatingBtn) {
+                    addStatus('🎨 悬浮按钮已创建', 'success');
+                } else {
+                    addStatus('❌ 悬浮按钮未找到', 'error');
+                }
+                
+                if (dropdown) {
+                    addStatus('📋 下拉菜单已创建', 'success');
+                } else {
+                    addStatus('❌ 下拉菜单未找到', 'error');
+                }
+            }, 2000);
+            
+            // 定期检查状态
+            setInterval(() => {
+                const isExpanded = document.querySelector('.floating-btn.active');
+                if (isExpanded) {
+                    addStatus('📱 菜单处于展开状态', 'info');
+                }
+            }, 5000);
+        }
+        
+        console.log('📋 测试页面脚本开始执行');
+    </script>
+    
+    <!-- 引入最终的悬浮菜单脚本 -->
+    <script src="/js/floating-menu-final.js"></script>
+</body>
+</html>

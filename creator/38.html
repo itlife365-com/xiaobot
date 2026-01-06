@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDO老徐 - 创作者 - 项目地图驿站</title>
+    <meta name="description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta name="keywords" content="项目地图驿站,优质项目,创作者,技术项目">
+    <meta name="author" content="项目地图驿站">
+    <link rel="canonical" href="https://xmdtyz.com/creator/38.html">
+    <meta property="og:title" content="IDO老徐 - 创作者 - 项目地图驿站">
+    <meta property="og:description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta property="og:url" content="https://xmdtyz.com/creator/38.html">
+    <meta property="og:type" content="website">
+    
+    <!-- 网站统计代码 -->
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ca86b4e64d755f4afa117488af3fc29d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 8px;
+            width: 70px;
+        }
+
+        .submit-column-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-column-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        
+        /* 项目卡片样式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 15px;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #007bff;
+        }
+        
+        .search-button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 筛选区域 */
+        .filters-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        /* 搜索统计 */
+        .search-stats {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 分类和标签样式 */
+        .categories-list, .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .category-item, .tag-item {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-item:hover, .tag-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* 创作者列表样式 */
+        .creators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .creator-item {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 页脚链接 */
+        .footer-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <!--<img src="https://via.placeholder.com/40" alt="Logo">-->
+                <span class="logo-text">项目地图驿站</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="/">首页</a></li>
+                <li class="nav-item "><a href="/featured">精选</a></li>
+                <li class="nav-item "><a href="/ranking">排行</a></li>
+                <li class="nav-item "><a href="/categories">分类</a></li>
+                <li class="nav-item active"><a href="/creators">创作者</a></li>
+                <li class="nav-item "><a href="/tags">标签</a></li>
+                <li class="nav-item "><a href="/explore">探索</a></li>
+                <li class="nav-item "><a href="/about">关于</a></li>
+                <li class="nav-item "><a href="/about">我要想拥有网站</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search-box" action="/categories" method="GET">
+                    <input type="text" name="q" placeholder="搜索项目...">
+                </form>
+                <a href="https://wj.qq.com/s2/25179437/d4f5/" class="submit-column-btn" target="_blank">提交专栏</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="main-content">
+        
+    <!-- 创作者详情页面 -->
+    <section class="creator-detail">
+        <div class="creator-header">
+            <div class="creator-info">
+                <img src="https://static.xiaobot.net/user-avatar/2023-11-11/7466/bbf199363c0ff3eb4ae91e92a8fca802.png" alt="IDO老徐" class="creator-avatar">
+                <div class="creator-meta">
+                    <h1 class="creator-name">IDO老徐</h1>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- 创作者项目列表 -->
+        <section class="creator-projects">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>IDO老徐的专栏</h2>
+                    <p>查看该创作者的所有项目</p>
+                </div>
+            </div>
+            
+            
+                <div class="projects-grid">
+                    
+                        <div class="project-card" onclick="window.location.href='/p/401.html'">
+                            <img src="https://static.xiaobot.net/paper/2022-09-14/7466/bd4fbc2951813b6c976844aebd42156b.png" alt="视频号可复制案例库">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        案例库
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">视频号可复制案例库</h3>
+                                <p class="project-description">
+                                    我是IDO老徐，从 2020 年 1 月份开始，带领 4 万人玩视频号，见证平台从 0 到 1 到 ...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 1047</span>
+                                    <span>文章 已更新 109 篇</span>
+                                    <span>价格 69.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/IP10.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-10-23/7466/95088e1c3de6bf10400e2f541bd2fde2.jpeg" alt="老徐合伙人·咨询答疑库">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        产品
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">老徐合伙人·咨询答疑库</h3>
+                                <p class="project-description">
+                                    这个专栏解决的问题：对 IDO老徐「万元客单价」产品《老徐合伙人》感兴趣，但还在纠结。或不确定是否对...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 617</span>
+                                    <span>文章 已更新 132 篇</span>
+                                    <span>价格 18.88</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/chat.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-06-14/7466/ac0b6f30cf9a044f0bc804013ba58fc5.jpeg" alt="用AI大模型零成本赚小钱">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        AI
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">用AI大模型零成本赚小钱</h3>
+                                <p class="project-description">
+                                    1. 独家更新 200 篇AI商业思考，零成本赚小钱（信息差 + 时间差 + 执行力）
+2. 内容板...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 3568</span>
+                                    <span>文章 已更新 159 篇</span>
+                                    <span>价格 66.66</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/idoxu.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-08-23/7466/80b9e95b20aeb5df9daa5a521b8ff846.jpeg" alt="公众号入门·自媒体写作赚钱">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        指南
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">公众号入门·自媒体写作赚钱</h3>
+                                <p class="project-description">
+                                    我是 IDO老徐。程序员/技术管理者，10w公号读者，3w付费用户，过往七年的公众号玩法经验和思考，...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 2482</span>
+                                    <span>文章 已更新 158 篇</span>
+                                    <span>价格 69.41</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/ip100.html'">
+                            <img src="https://static.xiaobot.net/paper/2022-12-03/7466/3d6bed4b176fe426cdbf83f8534a7bcf.png" alt="全网可复制IP案例库">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        案例库
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">全网可复制IP案例库</h3>
+                                <p class="project-description">
+                                    以 IDO老徐 的商业化视角，从全网精选 100 个可复制IP案例，探索可复制路径 。
+
+不限于：微...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 552</span>
+                                    <span>文章 已更新 2 篇</span>
+                                    <span>价格 99.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/ip50.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-11-03/7466/87490548dddcee82fe17f9895ed5a85c.jpeg" alt="一人企业·IP从0到赚钱50问">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        职场
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">一人企业·IP从0到赚钱50问</h3>
+                                <p class="project-description">
+                                    我是 IDO老徐 。在职场，玩副业，副业超主业。探索「一人企业复利商业化」，IP 复利商业化， 持续...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 1055</span>
+                                    <span>文章 已更新 55 篇</span>
+                                    <span>价格 36.66</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/mianshi.html'">
+                            <img src="https://static.xiaobot.net/paper/2024-02-22/7466/0132bbb51ff91165406fc5b354e6e493.jpeg" alt="技术人的简历面试跳槽30问">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        职场
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">技术人的简历面试跳槽30问</h3>
+                                <p class="project-description">
+                                    普通程序员，没有大厂背景，没有名校光环。一个半月，面试几十场，到手7个offer，薪资最高涨幅 40...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 379</span>
+                                    <span>文章 已更新 36 篇</span>
+                                    <span>价格 16.69</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/qiye.html'">
+                            <img src="https://static.xiaobot.net/paper/2024-01-30/7466/1a726ec542bd66157f3694f0bce95cd2.jpeg" alt="一人企业复利商业化（共读·送书）">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        商业
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">一人企业复利商业化（共读·送书）</h3>
+                                <p class="project-description">
+                                    一人企业玩家，必读，建议读 10 遍，并实践。
+
+限时最低价 69.96 ，会逐步涨价至 199
+点...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 516</span>
+                                    <span>文章 已更新 7 篇</span>
+                                    <span>价格 69.96</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/shequn.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-12-14/7466/e62d2e837e16229774fde271fb29ddc8.jpeg" alt="知识星球小技巧及社群商业化">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        商业
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">知识星球小技巧及社群商业化</h3>
+                                <p class="project-description">
+                                    专栏核心价值：
+1、IDO老徐 玩知识星球 8 年，星球的常见功能和玩法，都尝试了一遍，算是半个非官...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 576</span>
+                                    <span>文章 已更新 75 篇</span>
+                                    <span>价格 33.69</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/weixin.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-10-23/7466/799919bf1cf446bdc27c296a80014374.jpeg" alt="一人企业·私域复利小技巧">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        指南
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">一人企业·私域复利小技巧</h3>
+                                <p class="project-description">
+                                    我是 IDO老徐，读者 10W，付费用户 3W，六个微信好友满。在职场，玩副业，无助理。我怎么高效玩...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 1413</span>
+                                    <span>文章 已更新 82 篇</span>
+                                    <span>价格 56.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/wenwen.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-07-27/7466/b3480bfacb5fc2f359921f3b1508e6c1.jpeg" alt="微信问一问·流量赚钱专栏">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        生活
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">微信问一问·流量赚钱专栏</h3>
+                                <p class="project-description">
+                                    1. 看专栏解百惑，赚到钱。问一问免费涨粉利器
+独家更新 100 篇「问一问」经验贴。带你入门，解惑...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 1712</span>
+                                    <span>文章 已更新 110 篇</span>
+                                    <span>价格 79.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/xbt.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-06-11/7466/dbfbda247a7ccf7c32f3a6914b6946c4.jpeg" alt="小报童商业化·赚钱案例库">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        案例库
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">小报童商业化·赚钱案例库</h3>
+                                <p class="project-description">
+                                    如果你是 IP、副业、内容付费、轻创业、私域 等，绕不开这个专栏。没订阅的，大概率会走很多弯路。
+
+...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 3848</span>
+                                    <span>文章 已更新 117 篇</span>
+                                    <span>价格 19.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/xhs100.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-11-14/7466/17c1b014890d22cceca11e201dd35569.jpeg" alt="小红书赚钱·高频100问">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        小红书
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">小红书赚钱·高频100问</h3>
+                                <p class="project-description">
+                                    我是 IDO老徐 ，这是小红书高频问题 100 个精选。玩小红书一定会遇到这些问题，我的一些解决建议...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 547</span>
+                                    <span>文章 已更新 49 篇</span>
+                                    <span>价格 18.76</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/xhs168.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-11-14/7466/0c1f254b7957f79304f03fdd0e8a48c8.jpeg" alt="小红书新手入门指南及误区">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        指南
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">小红书新手入门指南及误区</h3>
+                                <p class="project-description">
+                                    我是 IDO老徐 ，小红书是赚钱人必备平台（门槛低，正反馈快，低粉商业化）。太多同学玩小红书一直不得...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 574</span>
+                                    <span>文章 已更新 28 篇</span>
+                                    <span>价格 18.93</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/xhs.html'">
+                            <img src="https://static.xiaobot.net/paper/2022-06-24/7466/c9e301d3dfd32a076c06f9c517a59e2b.png" alt="小红书可复制案例库2024">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        案例库
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">小红书可复制案例库2024</h3>
+                                <p class="project-description">
+                                    别人笔记几千几万赞，商业化收入不断，你的笔记没人看
+
+我是IDO老徐，帮你手工精选了 220 个小红...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 3832</span>
+                                    <span>文章 已更新 247 篇</span>
+                                    <span>价格 免费</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/xianyu.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-11-23/7466/a29cdabbf7875474226c7b901f164a4e.jpeg" alt="闲鱼无货源赚钱手把手">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        指南
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">闲鱼无货源赚钱手把手</h3>
+                                <p class="project-description">
+                                    2024，拿下闲鱼。顺趋势，赚小钱。
+
+从闲鱼无货源入门玩法、选品策略、成交话术、售后技巧等，带你零...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 1719</span>
+                                    <span>文章 已更新 60 篇</span>
+                                    <span>价格 33.33</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/xiezuo.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-10-23/7466/1b60334ed56c8bee9025589fb5a42d1a.jpeg" alt="短文写作100条·持续商业化">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        商业
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">短文写作100条·持续商业化</h3>
+                                <p class="project-description">
+                                    把写作变成一种习惯，像吃饭一样，一天不写难受。
+
+短文写作，持续写作，价值写作，持续价值写作，每个人...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 1341</span>
+                                    <span>文章 已更新 43 篇</span>
+                                    <span>价格 47.89</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="project-card" onclick="window.location.href='/p/yiren.html'">
+                            <img src="https://static.xiaobot.net/paper/2023-11-09/7466/7091071bdbe567bff13bf1fd9e77fcfa.jpeg" alt="IDO老徐·一人企业1000条短思考">
+                            <div class="project-content">
+                                <div class="project-meta">
+                                    <span class="project-category">
+                                        商业
+                                    </span>
+                                    <span class="project-creator">by IDO老徐</span>
+                                </div>
+                                <h3 class="project-title">IDO老徐·一人企业1000条短思考</h3>
+                                <p class="project-description">
+                                    专栏长期更新，一次订阅永久有效。
+
+未来 N 年，至少更新 1000 条「一人企业实战短思考」（ 5...
+                                </p>
+                                <div class="project-stats">
+                                    <span>订阅人数 678</span>
+                                    <span>文章 已更新 183 篇</span>
+                                    <span>价格 88.99</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            
+        </section>
+    </section>
+    
+    <style>
+        /* 创作者详情页样式 */
+        .creator-detail {
+            margin-bottom: 40px;
+        }
+        
+        .creator-header {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .creator-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .creator-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .creator-meta {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .creator-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .creator-bio {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .creator-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .creator-link:hover {
+            background-color: #0056b3;
+        }
+        
+        .creator-projects {
+            margin-top: 40px;
+        }
+        
+        .no-projects {
+            text-align: center;
+            padding: 40px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            color: #666;
+        }
+    </style>
+
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>项目地图驿站</h3>
+                <p>发现优质项目，连接创作者与用户</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/featured">精选</a></li>
+                    <li><a href="/ranking">排行</a></li>
+                    <li><a href="/categories">分类</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>更多</h3>
+                <ul>
+                    <li><a href="/creators">创作者</a></li>
+                    <li><a href="/tags">标签</a></li>
+                    <li><a href="/explore">探索</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">隐私说明</a> | 
+            <a href="/friends.html">友情链接</a> | 
+            <!-- <a href="/sitemap.xml">网站地图</a> -->
+        </div>
+        <div class="copyright">
+            
+                © 2025 项目地图驿站 xmdtyz.com. @xmdtyz.com.
+            
+            
+                <br>备案号：闽ICP备11018667号-2
+            
+            <!-- 本网站初始版本由项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航 开发-->
+        </div>
+    </footer>
+
+    <!-- 悬浮分类菜单 -->
+    <script src="/js/floating-menu-final.js"></script>
+</body>
+</html>

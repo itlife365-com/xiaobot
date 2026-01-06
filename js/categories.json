@@ -1,0 +1,527 @@
+{
+  "success": true,
+  "timestamp": "2026-01-04 17:30:00",
+  "total_count": 23,
+  "groups": {
+    "技术开发": [
+      {
+        "id": 14,
+        "name": "AI",
+        "slug": "ai",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 70,
+        "icon": "🤖",
+        "group": "技术开发",
+        "url": "/categories/ai"
+      },
+      {
+        "id": 20,
+        "name": "ChatGPT",
+        "slug": "chatgpt",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 31,
+        "icon": "💬",
+        "group": "技术开发",
+        "url": "/categories/chatgpt"
+      },
+      {
+        "id": 9,
+        "name": "互联网",
+        "slug": "Internet",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 8,
+        "icon": "🌐",
+        "group": "技术开发",
+        "url": "/categories/Internet"
+      },
+      {
+        "id": 22,
+        "name": "工具",
+        "slug": "tool",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 4,
+        "icon": "🔧",
+        "group": "技术开发",
+        "url": "/categories/tool"
+      },
+      {
+        "id": 1,
+        "name": "技术",
+        "slug": "tech",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 20,
+        "icon": "💻",
+        "group": "技术开发",
+        "url": "/categories/tech"
+      }
+    ],
+    "创意设计": [
+      {
+        "id": 19,
+        "name": "Midjourney",
+        "slug": "midjourney",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 8,
+        "icon": "🖼️",
+        "group": "创意设计",
+        "url": "/categories/midjourney"
+      },
+      {
+        "id": 23,
+        "name": "创作",
+        "slug": "creation",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 3,
+        "icon": "✍️",
+        "group": "创意设计",
+        "url": "/categories/creation"
+      },
+      {
+        "id": 13,
+        "name": "小红书",
+        "slug": "redbook",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 28,
+        "icon": "📝",
+        "group": "创意设计",
+        "url": "/categories/redbook"
+      },
+      {
+        "id": 3,
+        "name": "设计",
+        "slug": "design",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 6,
+        "icon": "🎨",
+        "group": "创意设计",
+        "url": "/categories/design"
+      }
+    ],
+    "商业运营": [
+      {
+        "id": 2,
+        "name": "产品",
+        "slug": "product",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 47,
+        "icon": "📱",
+        "group": "商业运营",
+        "url": "/categories/product"
+      },
+      {
+        "id": 11,
+        "name": "副业",
+        "slug": "sidehustle",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 9,
+        "icon": "🚀",
+        "group": "商业运营",
+        "url": "/categories/sidehustle"
+      },
+      {
+        "id": 8,
+        "name": "商业",
+        "slug": "business",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 16,
+        "icon": "💰",
+        "group": "商业运营",
+        "url": "/categories/business"
+      },
+      {
+        "id": 5,
+        "name": "职场",
+        "slug": "workplace",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 45,
+        "icon": "💼",
+        "group": "商业运营",
+        "url": "/categories/workplace"
+      },
+      {
+        "id": 17,
+        "name": "运营",
+        "slug": "operation",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 17,
+        "icon": "📊",
+        "group": "商业运营",
+        "url": "/categories/operation"
+      },
+      {
+        "id": 21,
+        "name": "项目",
+        "slug": "project",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 12,
+        "icon": "📦",
+        "group": "商业运营",
+        "url": "/categories/project"
+      }
+    ],
+    "其他": [
+      {
+        "id": 4,
+        "name": "创业",
+        "slug": "startbus",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 20,
+        "icon": "📂",
+        "group": "其他",
+        "url": "/categories/startbus"
+      }
+    ],
+    "学习成长": [
+      {
+        "id": 7,
+        "name": "心理",
+        "slug": "psychology",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 7,
+        "icon": "🧠",
+        "group": "学习成长",
+        "url": "/categories/psychology"
+      },
+      {
+        "id": 18,
+        "name": "指南",
+        "slug": "guide",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 50,
+        "icon": "📖",
+        "group": "学习成长",
+        "url": "/categories/guide"
+      },
+      {
+        "id": 15,
+        "name": "案例库",
+        "slug": "caselibrary",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 38,
+        "icon": "📋",
+        "group": "学习成长",
+        "url": "/categories/caselibrary"
+      },
+      {
+        "id": 16,
+        "name": "笔记",
+        "slug": "note",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 11,
+        "icon": "📓",
+        "group": "学习成长",
+        "url": "/categories/note"
+      },
+      {
+        "id": 6,
+        "name": "阅读",
+        "slug": "reading",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 34,
+        "icon": "📚",
+        "group": "学习成长",
+        "url": "/categories/reading"
+      }
+    ],
+    "生活娱乐": [
+      {
+        "id": 12,
+        "name": "播客",
+        "slug": "podcast",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 3,
+        "icon": "🎧",
+        "group": "生活娱乐",
+        "url": "/categories/podcast"
+      },
+      {
+        "id": 10,
+        "name": "生活",
+        "slug": "life",
+        "description": null,
+        "icon_url": null,
+        "projects_count": 28,
+        "icon": "🏠",
+        "group": "生活娱乐",
+        "url": "/categories/life"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "id": 14,
+      "name": "AI",
+      "slug": "ai",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 70,
+      "icon": "🤖",
+      "group": "技术开发",
+      "url": "/categories/ai"
+    },
+    {
+      "id": 20,
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 31,
+      "icon": "💬",
+      "group": "技术开发",
+      "url": "/categories/chatgpt"
+    },
+    {
+      "id": 19,
+      "name": "Midjourney",
+      "slug": "midjourney",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 8,
+      "icon": "🖼️",
+      "group": "创意设计",
+      "url": "/categories/midjourney"
+    },
+    {
+      "id": 9,
+      "name": "互联网",
+      "slug": "Internet",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 8,
+      "icon": "🌐",
+      "group": "技术开发",
+      "url": "/categories/Internet"
+    },
+    {
+      "id": 2,
+      "name": "产品",
+      "slug": "product",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 47,
+      "icon": "📱",
+      "group": "商业运营",
+      "url": "/categories/product"
+    },
+    {
+      "id": 4,
+      "name": "创业",
+      "slug": "startbus",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 20,
+      "icon": "📂",
+      "group": "其他",
+      "url": "/categories/startbus"
+    },
+    {
+      "id": 23,
+      "name": "创作",
+      "slug": "creation",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 3,
+      "icon": "✍️",
+      "group": "创意设计",
+      "url": "/categories/creation"
+    },
+    {
+      "id": 11,
+      "name": "副业",
+      "slug": "sidehustle",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 9,
+      "icon": "🚀",
+      "group": "商业运营",
+      "url": "/categories/sidehustle"
+    },
+    {
+      "id": 8,
+      "name": "商业",
+      "slug": "business",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 16,
+      "icon": "💰",
+      "group": "商业运营",
+      "url": "/categories/business"
+    },
+    {
+      "id": 13,
+      "name": "小红书",
+      "slug": "redbook",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 28,
+      "icon": "📝",
+      "group": "创意设计",
+      "url": "/categories/redbook"
+    },
+    {
+      "id": 22,
+      "name": "工具",
+      "slug": "tool",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 4,
+      "icon": "🔧",
+      "group": "技术开发",
+      "url": "/categories/tool"
+    },
+    {
+      "id": 7,
+      "name": "心理",
+      "slug": "psychology",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 7,
+      "icon": "🧠",
+      "group": "学习成长",
+      "url": "/categories/psychology"
+    },
+    {
+      "id": 1,
+      "name": "技术",
+      "slug": "tech",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 20,
+      "icon": "💻",
+      "group": "技术开发",
+      "url": "/categories/tech"
+    },
+    {
+      "id": 18,
+      "name": "指南",
+      "slug": "guide",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 50,
+      "icon": "📖",
+      "group": "学习成长",
+      "url": "/categories/guide"
+    },
+    {
+      "id": 12,
+      "name": "播客",
+      "slug": "podcast",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 3,
+      "icon": "🎧",
+      "group": "生活娱乐",
+      "url": "/categories/podcast"
+    },
+    {
+      "id": 15,
+      "name": "案例库",
+      "slug": "caselibrary",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 38,
+      "icon": "📋",
+      "group": "学习成长",
+      "url": "/categories/caselibrary"
+    },
+    {
+      "id": 10,
+      "name": "生活",
+      "slug": "life",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 28,
+      "icon": "🏠",
+      "group": "生活娱乐",
+      "url": "/categories/life"
+    },
+    {
+      "id": 16,
+      "name": "笔记",
+      "slug": "note",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 11,
+      "icon": "📓",
+      "group": "学习成长",
+      "url": "/categories/note"
+    },
+    {
+      "id": 5,
+      "name": "职场",
+      "slug": "workplace",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 45,
+      "icon": "💼",
+      "group": "商业运营",
+      "url": "/categories/workplace"
+    },
+    {
+      "id": 3,
+      "name": "设计",
+      "slug": "design",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 6,
+      "icon": "🎨",
+      "group": "创意设计",
+      "url": "/categories/design"
+    },
+    {
+      "id": 17,
+      "name": "运营",
+      "slug": "operation",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 17,
+      "icon": "📊",
+      "group": "商业运营",
+      "url": "/categories/operation"
+    },
+    {
+      "id": 6,
+      "name": "阅读",
+      "slug": "reading",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 34,
+      "icon": "📚",
+      "group": "学习成长",
+      "url": "/categories/reading"
+    },
+    {
+      "id": 21,
+      "name": "项目",
+      "slug": "project",
+      "description": null,
+      "icon_url": null,
+      "projects_count": 12,
+      "icon": "📦",
+      "group": "商业运营",
+      "url": "/categories/project"
+    }
+  ]
+}

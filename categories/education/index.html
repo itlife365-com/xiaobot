@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育 - 项目分类 - 项目地图驿站</title>
+    <meta name="description" content="项目地图驿站 - 发现优质项目，连接创作者与用户">
+    <meta name="keywords" content="项目地图驿站,优质项目,创作者,技术项目">
+    <meta name="author" content="项目地图驿站">
+    <link rel="canonical" href="https://xmdtyz.com/categories/education">
+    <meta property="og:title" content="教育 - 项目分类 - 项目地图驿站">
+    <meta property="og:description" content="项目地图驿站 - 发现优质项目，连接创作者与用户">
+    <meta property="og:url" content="https://xmdtyz.com/categories/education">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 8px;
+            width: 70px;
+        }
+
+        .submit-column-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-column-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        
+        /* 项目卡片样式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 15px;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #007bff;
+        }
+        
+        .search-button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 筛选区域 */
+        .filters-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        /* 搜索统计 */
+        .search-stats {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 分类和标签样式 */
+        .categories-list, .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .category-item, .tag-item {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-item:hover, .tag-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* 创作者列表样式 */
+        .creators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .creator-item {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 页脚链接 */
+        .footer-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <!--<img src="https://via.placeholder.com/40" alt="Logo">-->
+                <span class="logo-text">项目地图驿站</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="/">首页</a></li>
+                <li class="nav-item "><a href="/featured">精选</a></li>
+                <li class="nav-item "><a href="/ranking">排行</a></li>
+                <li class="nav-item active"><a href="/categories">分类</a></li>
+                <li class="nav-item "><a href="/creators">创作者</a></li>
+                <li class="nav-item "><a href="/tags">标签</a></li>
+                <li class="nav-item "><a href="/explore">探索</a></li>
+                <li class="nav-item "><a href="/about">关于</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search-box" action="/categories" method="GET">
+                    <input type="text" name="q" placeholder="搜索项目...">
+                </form>
+                <a href="https://wj.qq.com/s2/25179437/d4f5/" class="submit-column-btn" target="_blank">提交专栏</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="main-content">
+        
+    <!-- 页面路径 -->
+    <div class="breadcrumb">
+        <a href="/">首页</a> &gt; 浏览专栏分类
+    </div>
+    
+    <!-- 标题区域 -->
+    <div class="page-header">
+        <h1 class="page-title">浏览专栏</h1>
+        <p class="page-subtitle">按分类查找你感兴趣的专栏内容</p>
+    </div>
+    
+    <!-- 搜索框 -->
+    <div class="search-section">
+        <input type="text" id="search-input" placeholder="搜索专栏、作者或标签..." class="search-box">
+        <button id="search-btn" class="search-button">搜索</button>
+    </div>
+    
+    <!-- 筛选区域 -->
+    <div class="filters-section">
+        <!-- 分类筛选 -->
+        <div class="filter-group">
+            <h3 class="filter-title">分类筛选</h3>
+            <div class="filter-options" id="category-filters">
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="tech"> 技术
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="design"> 设计
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="marketing"> 营销
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="product"> 产品
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="operation"> 运营
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="startup"> 创业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="investment"> 投资
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="education"> 教育
+                    </label>
+                
+            </div>
+        </div>
+        
+        <!-- 价格筛选 -->
+        <div class="filter-group">
+            <h3 class="filter-title">价格筛选</h3>
+            <div class="filter-options" id="price-filters">
+                <label class="filter-option">
+                    <input type="radio" name="price" value="all" checked> 全部
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="price" value="free"> 免费
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="price" value="paid"> 付费
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 搜索统计 -->
+    <div class="search-stats" id="search-stats">
+        找到 0 个专栏
+    </div>
+    
+    <!-- 项目列表 -->
+    <div class="projects-grid" id="projects-grid">
+        
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // 页面加载时检查URL参数
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            const priceParam = urlParams.get('price');
+            const searchParam = urlParams.get('search');
+            
+            // 如果URL有分类参数，选中对应分类
+            if (categoryParam) {
+                const categoryCheck = document.querySelector(`input[name="category"][value="${categoryParam}"]`);
+                if (categoryCheck) {
+                    categoryCheck.checked = true;
+                }
+            }
+            
+            // 如果URL有价格参数，选中对应价格
+            if (priceParam) {
+                const priceRadio = document.querySelector(`input[name="price"][value="${priceParam}"]`);
+                if (priceRadio) {
+                    priceRadio.checked = true;
+                }
+            }
+            
+            // 如果URL有搜索参数，填充搜索框
+            if (searchParam) {
+                document.getElementById('search-input').value = searchParam;
+            }
+            
+            // 应用筛选
+            applyFilters();
+        });
+        
+        // 搜索功能
+        document.getElementById('search-btn').addEventListener('click', function() {
+            performSearch();
+        });
+        
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // 筛选变化时应用筛选
+        document.querySelectorAll('input[name="category"], input[name="price"]').forEach(input => {
+            input.addEventListener('change', applyFilters);
+        });
+        
+        function performSearch() {
+            const searchTerm = document.getElementById('search-input').value.trim();
+            const currentParams = new URLSearchParams(window.location.search);
+            
+            if (searchTerm) {
+                currentParams.set('search', searchTerm);
+            } else {
+                currentParams.delete('search');
+            }
+            
+            // 更新URL
+            window.history.pushState({}, '', `${window.location.pathname}?${currentParams.toString()}`);
+            
+            // 应用筛选
+            applyFilters();
+        }
+        
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+            const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+            const selectedPrice = document.querySelector('input[name="price"]:checked').value;
+            
+            const projectCards = document.querySelectorAll('.project-card');
+            let visibleCount = 0;
+            
+            projectCards.forEach(card => {
+                const category = card.dataset.category;
+                const price = card.dataset.price;
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const creator = card.querySelector('.project-creator').textContent.toLowerCase();
+                
+                // 搜索筛选
+                const matchesSearch = !searchTerm || title.includes(searchTerm) || creator.includes(searchTerm);
+                
+                // 分类筛选
+                const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+                
+                // 价格筛选
+                let matchesPrice = true;
+                if (selectedPrice === 'free') {
+                    matchesPrice = price === 'free';
+                } else if (selectedPrice === 'paid') {
+                    matchesPrice = price === 'paid';
+                }
+                
+                if (matchesSearch && matchesCategory && matchesPrice) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 更新统计
+            document.getElementById('search-stats').textContent = `找到 ${visibleCount} 个专栏`;
+        }
+    </script>
+
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>项目地图驿站</h3>
+                <p>发现优质项目，连接创作者与用户</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/featured">精选</a></li>
+                    <li><a href="/ranking">排行</a></li>
+                    <li><a href="/categories">分类</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>更多</h3>
+                <ul>
+                    <li><a href="/creators">创作者</a></li>
+                    <li><a href="/tags">标签</a></li>
+                    <li><a href="/explore">探索</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">隐私说明</a> | 
+            <a href="/friends.html">友情链接</a> | 
+            <a href="/sitemap.xml">网站地图</a>
+        </div>
+        <div class="copyright">
+            © 2025 项目地图驿站 xmdtyz.com. 保留所有权利.
+            <!-- 本网站初始版本由项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航 开发-->
+        </div>
+    </footer>
+    <!-- 悬浮分类菜单 -->
+    <script src="/js/floating-menu.js"></script>
+</body>
+</html>

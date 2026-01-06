@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单测试页面</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 50px; 
+            background: #f5f5f5;
+        }
+        .test-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 悬浮菜单测试页面</h1>
+        <p>如果看到悬浮按钮，说明脚本正常执行了！</p>
+        <div id="result">等待脚本执行...</div>
+    </div>
+
+    <script>
+        console.log('🔍 页面脚本开始执行');
+        
+        // 检查DOM加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('✅ DOM加载完成');
+            document.getElementById('result').innerHTML = '✅ DOM已加载，等待脚本执行...';
+        });
+        
+        // 检查页面加载完成
+        window.addEventListener('load', function() {
+            console.log('✅ 页面加载完成');
+            document.getElementById('result').innerHTML = '✅ 页面已加载完成';
+            
+            // 5秒后检查是否有悬浮菜单
+            setTimeout(function() {
+                const floatingMenu = document.getElementById('floatingCategoryMenu');
+                const floatingBtn = document.getElementById('floatingBtn');
+                
+                if (floatingBtn) {
+                    console.log('✅ 找到悬浮按钮');
+                    document.getElementById('result').innerHTML = '✅ 找到悬浮按钮！脚本执行成功！';
+                    document.getElementById('result').style.background = '#d4edda';
+                    document.getElementById('result').style.color = '#155724';
+                } else {
+                    console.log('❌ 没有找到悬浮按钮');
+                    document.getElementById('result').innerHTML = '❌ 没有找到悬浮按钮 - 脚本可能没有执行';
+                    document.getElementById('result').style.background = '#f8d7da';
+                    document.getElementById('result').style.color = '#721c24';
+                }
+            }, 2000);
+        });
+    </script>
+
+    <!-- 引入简化版悬浮菜单脚本 -->
+    <script src="/js/floating-menu-simple.js"></script>
+</body>
+</html>

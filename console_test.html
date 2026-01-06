@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>脚本执行验证测试</title>
+</head>
+<body>
+    <h1>🧪 脚本执行验证测试</h1>
+    <div id="output"></div>
+    
+    <script>
+        console.log('📋 测试页面脚本开始执行');
+        const output = document.getElementById('output');
+        
+        // 记录控制台信息到页面
+        const originalConsoleLog = console.log;
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            const message = args.join(' ');
+            output.innerHTML += `<div style="margin: 5px 0; padding: 5px; background: #f0f0f0; border-radius: 3px;">${message}</div>`;
+        };
+        
+        // 页面加载完成
+        window.addEventListener('load', () => {
+            console.log('✅ 页面加载完成');
+            
+            setTimeout(() => {
+                console.log('🔍 检查DOM元素...');
+                
+                // 检查是否有调试指示器
+                const indicators = document.querySelectorAll('[style*="position: fixed"]');
+                console.log(`找到 ${indicators.length} 个固定定位元素`);
+                
+                indicators.forEach((el, index) => {
+                    console.log(`元素 ${index}: ${el.innerHTML || el.textContent}`);
+                });
+                
+                // 检查是否有悬浮按钮
+                const floatingBtns = document.querySelectorAll('[style*="bottom: 30px"]');
+                console.log(`找到 ${floatingBtns.length} 个悬浮按钮元素`);
+                
+                console.log('🏁 检查完成');
+            }, 3000);
+        });
+    </script>
+    
+    <script src="/js/floating-menu-ultra-simple.js"></script>
+</body>
+</html>

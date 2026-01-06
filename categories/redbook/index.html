@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书 - 项目分类 - 项目地图驿站</title>
+    <meta name="description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta name="keywords" content="项目地图驿站,优质项目,创作者,技术项目">
+    <meta name="author" content="项目地图驿站">
+    <link rel="canonical" href="https://xmdtyz.com/categories/redbook">
+    <meta property="og:title" content="小红书 - 项目分类 - 项目地图驿站">
+    <meta property="og:description" content="项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航,小报童项目推荐,副业项目导航站,技术提升">
+    <meta property="og:url" content="https://xmdtyz.com/categories/redbook">
+    <meta property="og:type" content="website">
+    
+    <!-- 网站统计代码 -->
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ca86b4e64d755f4afa117488af3fc29d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 40px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin-right: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-item a:hover,
+        .nav-item.active a {
+            color: #007bff;
+        }
+        
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 20px;
+            padding: 5px 15px;
+        }
+        
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 8px;
+            width: 70px;
+        }
+
+        .submit-column-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .submit-column-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 主内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+        }
+        
+        /* 项目卡片样式 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-info {
+            padding: 15px;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .project-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* 面包屑导航 */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* 页面标题 */
+        .page-header {
+            margin-bottom: 30px;
+        }
+        
+        .page-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 搜索区域 */
+        .search-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-box:focus {
+            border-color: #007bff;
+        }
+        
+        .search-button {
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* 筛选区域 */
+        .filters-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+        
+        /* 搜索统计 */
+        .search-stats {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* 分类和标签样式 */
+        .categories-list, .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .category-item, .tag-item {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+        }
+        
+        .category-item:hover, .tag-item:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        /* 创作者列表样式 */
+        .creators-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .creator-item {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .creator-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        /* 页脚样式 */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #007bff;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* 页脚链接 */
+        .footer-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            color: #1976d2;
+            text-decoration: underline;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <!--<img src="https://via.placeholder.com/40" alt="Logo">-->
+                <span class="logo-text">项目地图驿站</span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item "><a href="/">首页</a></li>
+                <li class="nav-item "><a href="/featured">精选</a></li>
+                <li class="nav-item "><a href="/ranking">排行</a></li>
+                <li class="nav-item active"><a href="/categories">分类</a></li>
+                <li class="nav-item "><a href="/creators">创作者</a></li>
+                <li class="nav-item "><a href="/tags">标签</a></li>
+                <li class="nav-item "><a href="/explore">探索</a></li>
+                <li class="nav-item "><a href="/about">关于</a></li>
+                <li class="nav-item "><a href="/about">我要想拥有网站</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search-box" action="/categories" method="GET">
+                    <input type="text" name="q" placeholder="搜索项目...">
+                </form>
+                <a href="https://wj.qq.com/s2/25179437/d4f5/" class="submit-column-btn" target="_blank">提交专栏</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 主内容 -->
+    <main class="main-content">
+        
+    <!-- 页面路径 -->
+    <div class="breadcrumb">
+        <a href="/">首页</a> &gt; 浏览专栏分类
+    </div>
+    
+    <!-- 标题区域 -->
+    <div class="page-header">
+        <h1 class="page-title">浏览专栏</h1>
+        <p class="page-subtitle">按分类查找你感兴趣的专栏内容</p>
+    </div>
+    
+    <!-- 搜索框 -->
+    <div class="search-section">
+        <input type="text" id="search-input" placeholder="搜索专栏、作者或标签..." class="search-box">
+        <button id="search-btn" class="search-button">搜索</button>
+    </div>
+    
+    <!-- 筛选区域 -->
+    <div class="filters-section">
+        <!-- 分类筛选 -->
+        <div class="filter-group">
+            <h3 class="filter-title">分类筛选</h3>
+            <div class="filter-options" id="category-filters">
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="tech"> 技术
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="product"> 产品
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="design"> 设计
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="startbus"> 创业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="workplace"> 职场
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="reading"> 阅读
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="psychology"> 心理
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="business"> 商业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="Internet"> 互联网
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="life"> 生活
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="sidehustle"> 副业
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="podcast"> 播客
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="redbook"> 小红书
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="ai"> AI
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="caselibrary"> 案例库
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="note"> 笔记
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="operation"> 运营
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="guide"> 指南
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="midjourney"> Midjourney
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="chatgpt"> ChatGPT
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="project"> 项目
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="tool"> 工具
+                    </label>
+                
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="creation"> 创作
+                    </label>
+                
+            </div>
+        </div>
+        
+        <!-- 价格筛选 -->
+        <div class="filter-group">
+            <h3 class="filter-title">价格筛选</h3>
+            <div class="filter-options" id="price-filters">
+                <label class="filter-option">
+                    <input type="radio" name="price" value="all" checked> 全部
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="price" value="free"> 免费
+                </label>
+                <label class="filter-option">
+                    <input type="radio" name="price" value="paid"> 付费
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 搜索统计 -->
+    <div class="search-stats" id="search-stats">
+        找到 28 个专栏
+    </div>
+    
+    <!-- 项目列表 -->
+    <div class="projects-grid" id="projects-grid">
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/1000009.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-14/284144/215671fc0833061f913d422dc1c10854.jpeg" alt="玩赚私域从0到变现">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by findyi</span>
+                    </div>
+                    <h3 class="project-title">玩赚私域从0到变现</h3>
+                    <p class="project-description">
+                        作者 findyi，江湖人称洋哥，AI 破局俱乐部主理人，通过私域积累用户扩大势能实现年营收超千万。...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 2323</span>
+                        <span>文章 已更新 54 篇</span>
+                        <span>价格 ¥29.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/6688168.html'">
+                <img src="https://static.xiaobot.net/paper/2023-02-23/182356/1c30da32e08e7d6fb9f3ac5302702125.jpeg" alt="迪安内容电商第一课">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by Dian 🍷</span>
+                    </div>
+                    <h3 class="project-title">迪安内容电商第一课</h3>
+                    <p class="project-description">
+                        Dian :
+一年在社交媒体花费5000w+ ，
+所有投放以盈利为目标，一直追求健康的生意增长。
+一...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 404</span>
+                        <span>文章 已更新 15 篇</span>
+                        <span>价格 ¥99.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/Doris1996.html'">
+                <img src="https://static.xiaobot.net/paper/2023-02-04/98108/fc7755bce6853fae21386d0bbf9907e3.png" alt="多多子的探索笔记（自由职业闯关中）">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 多多子</span>
+                    </div>
+                    <h3 class="project-title">多多子的探索笔记（自由职业闯关中）</h3>
+                    <p class="project-description">
+                        嗨！我是多多子！
+
+▪︎UQ语言学硕士 / 企业知识管理顾问;外训师/个人成长教练
+▪︎小红书2.4...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 63</span>
+                        <span>文章 已更新 72 篇</span>
+                        <span>价格 ¥129.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/Jianghe.html'">
+                <img src="https://static.xiaobot.net/paper/2022-10-31/25566/46ff2697911d80835e6123c8e79b37f9.jpeg" alt="小红书博主行业风向标（拆解起号快博主）">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 江河@小红书营销</span>
+                    </div>
+                    <h3 class="project-title">小红书博主行业风向标（拆解起号快博主）</h3>
+                    <p class="project-description">
+                        做小红书账号最怕没有目标和思路，
+对标不是对手，是参考！更是灵感来源！
+拆解近期起号快的博主，涨粉越...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 68</span>
+                        <span>文章 已更新 194 篇</span>
+                        <span>价格 ¥49.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/KarlHeinz99.html'">
+                <img src="https://static.xiaobot.net/paper/2023-10-15/283909/ee934af9c9a99d7ab711be42c5828f2c.jpeg" alt="AI 小红书爆款变现">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 卡尔</span>
+                    </div>
+                    <h3 class="project-title">AI 小红书爆款变现</h3>
+                    <p class="project-description">
+                        作者卡尔：小红书教练，AI 领域 SCI、EI作者，4万人付费社群AI小红书总教练，21w粉小红书博...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 2242</span>
+                        <span>文章 已更新 39 篇</span>
+                        <span>价格 ¥69.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/MSk1888999.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-05/77958/d713389625274895ace159d522463426.jpeg" alt="自媒体人必备引流手册">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 生财小苗哥</span>
+                    </div>
+                    <h3 class="project-title">自媒体人必备引流手册</h3>
+                    <p class="project-description">
+                        进入知识付费后半场，流量越来越难获取，你会发现：公域难引流、私域难留存 ！
+
+如果你是：互联网副业/...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1211</span>
+                        <span>文章 已更新 50 篇</span>
+                        <span>价格 ¥28.8</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/boom666.html'">
+                <img src="https://static.xiaobot.net/paper/2023-12-19/125680/64a7bfd042f5d192bfa5f564daae28df.jpeg" alt="拆解小红书最赚钱的 6 大赛道">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 三多运营笔记</span>
+                    </div>
+                    <h3 class="project-title">拆解小红书最赚钱的 6 大赛道</h3>
+                    <p class="project-description">
+                        👉价格：
+原价199元，限时39.9元💰买断；每增加50 人涨10元；会不定时加餐补内容；
+免费送价...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 54</span>
+                        <span>文章 已更新 6 篇</span>
+                        <span>价格 ¥39.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/course.html'">
+                <img src="https://static.xiaobot.net/paper/2022-11-23/49017/cf289cf416383fb943f677a277a71f20.jpeg" alt="小红书冷启动SOP">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 乌素淖尔</span>
+                    </div>
+                    <h3 class="project-title">小红书冷启动SOP</h3>
+                    <p class="project-description">
+                        🙋‍♀️目标用户
+①没有做号，有好奇，但没有耐心自己研究
+②已经做了号，但不得要领，一个人有点坚持不...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1877</span>
+                        <span>文章 已更新 47 篇</span>
+                        <span>价格 ¥188.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/dl958488455.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-29/168696/bedca5a3f7a784ac4238d692c9c401b4.jpeg" alt="AI小红书从入门到变现">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 105 大李流量笔记</span>
+                    </div>
+                    <h3 class="project-title">AI小红书从入门到变现</h3>
+                    <p class="project-description">
+                        想做 IP、副业、知识付费、轻创业及实体商家朋友，一定要订阅此专栏，提高成事概率。
+
+如何借助 AI...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 687</span>
+                        <span>文章 已更新 234 篇</span>
+                        <span>价格 ¥29.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="free" onclick="window.location.href='/p/dmbj.html'">
+                <img src="https://static.xiaobot.net/paper/2023-12-04/394289/871d33403b29a7299df1e7dfd2bb89da.jpeg" alt="AI写作专栏">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 丹木笔记</span>
+                    </div>
+                    <h3 class="project-title">AI写作专栏</h3>
+                    <p class="project-description">
+                        我是谁？
+985研究生，8年副业项目经验，专注AI写作和IP，在公众号创建的 1 个年内，涨粉5W+...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 0</span>
+                        <span>文章 已更新 63 篇</span>
+                        <span>价格 免费</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/doumiaoyx.html'">
+                <img src="https://static.xiaobot.net/paper/2025-02-08/206170/72200434757c3e04eaf1768cd4eb2a3f.jpeg" alt="小红书运营手册">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 王小喵</span>
+                    </div>
+                    <h3 class="project-title">小红书运营手册</h3>
+                    <p class="project-description">
+                        哈喽～我是小喵。
+自洽IP运营教练，小红书万粉博主
+通过小红书变现20w+
+赋能10000+人做好个...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 348</span>
+                        <span>文章 已更新 59 篇</span>
+                        <span>价格 ¥199.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/gerenip.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-03/714/0102eda4b01a5f144b9cccf665f76761.jpeg" alt="小红书高转化模块库">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 大辉</span>
+                    </div>
+                    <h3 class="project-title">小红书高转化模块库</h3>
+                    <p class="project-description">
+                        别人笔记上万赞，你的笔记没人看
+别人笔记 V 加爆，你的笔记看完走
+别人笔记有钱赚，你的笔记难变现
+...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 268</span>
+                        <span>文章 已更新 93 篇</span>
+                        <span>价格 ¥69.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/jchermy.html'">
+                <img src="https://static.xiaobot.net/paper/2023-07-24/8352/729af3093a41ac376e747119653dd6e9.jpeg" alt="玩赚小红书指南 | 连载中">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 赫敏姐姐</span>
+                    </div>
+                    <h3 class="project-title">玩赚小红书指南 | 连载中</h3>
+                    <p class="project-description">
+                        🎃【自媒体是当下时代留给普通人的最后红利】
+🍠 而小红书，是所有自媒体平台中最值得投入的。
+
+👩🏻‍...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 176</span>
+                        <span>文章 已更新 19 篇</span>
+                        <span>价格 ¥299.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/lanyi0669.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-28/32183/5ba5c331d3cc9f3b2cb9a9ebf7f82bbe.jpeg" alt="小红书商业变现兵器库">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 蓝衣｜小红书自媒体</span>
+                    </div>
+                    <h3 class="project-title">小红书商业变现兵器库</h3>
+                    <p class="project-description">
+                        我是蓝衣，主业三甲医院医生，副业小红书自媒体，拥有多年小红书实战经验，变现超过七位数。
+
+为大家轻度...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 48</span>
+                        <span>文章 已更新 121 篇</span>
+                        <span>价格 ¥99.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/lhcfxhs.html'">
+                <img src="https://static.xiaobot.net/paper/2025-03-09/280149/7f822059949ecea937c46bc812dcabe1.png" alt="基础实战丨小红书IP运营变现课">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 理白（私人号）</span>
+                    </div>
+                    <h3 class="project-title">基础实战丨小红书IP运营变现课</h3>
+                    <p class="project-description">
+                        13节小红书IP运营与变现大课＋1V1辅导干货沉淀
+小红书变现，一起赚取第一桶金！星辰学院出品。
+
+...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 952</span>
+                        <span>文章 已更新 15 篇</span>
+                        <span>价格 ¥10.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="free" onclick="window.location.href='/p/linqingpro.html'">
+                <img src="https://static.xiaobot.net/paper/2025-02-18/2046/d209f835007b37e4b1533f0757284756.png" alt="小红书经营指北V2.0｜暂不对外❌">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 林卿LinQ</span>
+                    </div>
+                    <h3 class="project-title">小红书经营指北V2.0｜暂不对外❌</h3>
+                    <p class="project-description">
+                        后续不在小报童更新啦，拒绝新人付费订阅❌
+
+《小红书经营指北》是林卿出品的、聚焦小红书领域的内容小册...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 601</span>
+                        <span>文章 已更新 33 篇</span>
+                        <span>价格 免费</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/mj.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-13/293161/cde7d53ce582d2dbe364097a82ccf0c6.png" alt="小红书绘画万粉计划">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 阿杰</span>
+                    </div>
+                    <h3 class="project-title">小红书绘画万粉计划</h3>
+                    <p class="project-description">
+                        专栏作者：阿杰，国内最大 AI 社群合伙人，60 天小红书涨粉破万，播放破百万。
+
+小册主要分为四个...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 847</span>
+                        <span>文章 已更新 83 篇</span>
+                        <span>价格 ¥15.9</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/redbook0-1.html'">
+                <img src="https://static.xiaobot.net/paper/2023-05-17/9934/e683faea3261198c5e5b56bf00f06449.png" alt="从0开始的小红书搞钱指南">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by Ruby和May</span>
+                    </div>
+                    <h3 class="project-title">从0开始的小红书搞钱指南</h3>
+                    <p class="project-description">
+                        独一无二的小红书搞钱指南！
+手把手教你解决新人在从0到1的阶段，最容易卡住的那些问题：
+
+1. 了解...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 552</span>
+                        <span>文章 已更新 27 篇</span>
+                        <span>价格 ¥59.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/skychentian.html'">
+                <img src="https://static.xiaobot.net/paper/2023-12-09/229290/4ab0c76f3e0d680019b55a7ef82a4c2b.jpeg" alt="AI小红书IP起号">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by sky陈天</span>
+                    </div>
+                    <h3 class="project-title">AI小红书IP起号</h3>
+                    <p class="project-description">
+                        作者sky陈天：AI破局企培负责人，AI破局合伙人。985毕业，AI破局小红书金牌教练、AI转型提效...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1322</span>
+                        <span>文章 已更新 58 篇</span>
+                        <span>价格 ¥16.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/sop.html'">
+                <img src="https://static.xiaobot.net/paper/2022-07-26/49017/0f0ad182d8823f58b207e00d0aae278d.jpeg" alt="手把手带你写SOP">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 乌素淖尔</span>
+                    </div>
+                    <h3 class="project-title">手把手带你写SOP</h3>
+                    <p class="project-description">
+                        👩🏻乌素，课程制作人，《新媒体数据分析》作者
+
+🚀不仅要解决问题，还要不断用「更聪明的方式」
+
+🎁你...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 693</span>
+                        <span>文章 已更新 23 篇</span>
+                        <span>价格 ¥108.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/xhs100.html'">
+                <img src="https://static.xiaobot.net/paper/2023-11-14/7466/17c1b014890d22cceca11e201dd35569.jpeg" alt="小红书赚钱·高频100问">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by IDO老徐</span>
+                    </div>
+                    <h3 class="project-title">小红书赚钱·高频100问</h3>
+                    <p class="project-description">
+                        我是 IDO老徐 ，这是小红书高频问题 100 个精选。玩小红书一定会遇到这些问题，我的一些解决建议...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 547</span>
+                        <span>文章 已更新 49 篇</span>
+                        <span>价格 ¥18.76</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/xiangmu.html'">
+                <img src="https://static.xiaobot.net/paper/2023-09-11/196692/e1110e7ea39c810da55c0ab3f551e4ec.jpeg" alt="小红书电商进阶版 - 打造赚钱的带货笔记">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 青峰</span>
+                    </div>
+                    <h3 class="project-title">小红书电商进阶版 - 打造赚钱的带货笔记</h3>
+                    <p class="project-description">
+                        别人带货笔记几千几万赞，你的带货笔记，不到200个小眼睛
+
+别人一天发个10条8条没问题，你一发笔记...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 157</span>
+                        <span>文章 已更新 65 篇</span>
+                        <span>价格 ¥19.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/xiaohongren.html'">
+                <img src="https://static.xiaobot.net/paper/2024-03-30/106309/e1ee845e635b6bfe56acff36ce1838fb.jpeg" alt="小红书爆款笔记优质拆解">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 小红人创业汇</span>
+                    </div>
+                    <h3 class="project-title">小红书爆款笔记优质拆解</h3>
+                    <p class="project-description">
+                        50条优质爆款文案拆解，帮助更多博主提升文案能力，成为爆款制造机。
+
+原价2000元，限时38.8元...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 735</span>
+                        <span>文章 已更新 30 篇</span>
+                        <span>价格 ¥38.8</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/xiaohongshuku.html'">
+                <img src="https://static.xiaobot.net/paper/2025-11-17/24925/69cdf582447d9f19e4a7db285cdf2f68.jpeg" alt="小红书运营手册｜全本连载中">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 王梦珂</span>
+                    </div>
+                    <h3 class="project-title">小红书运营手册｜全本连载中</h3>
+                    <p class="project-description">
+                        这里是小报童获知名产品专家背书最多的小红书主题【社群+专栏】二合一产品，优质社群，连载至今，口碑极佳...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 2788</span>
+                        <span>文章 已更新 46 篇</span>
+                        <span>价格 ¥499.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/xunma68.html'">
+                <img src="https://static.xiaobot.net/paper/2024-03-07/413725/22e6538ce7adc4872988333230ca76ca.jpeg" alt="勋妈的小红书百万搞钱心法">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 勋妈｜宝妈小红书导师</span>
+                    </div>
+                    <h3 class="project-title">勋妈的小红书百万搞钱心法</h3>
+                    <p class="project-description">
+                        专栏包括3大板块：
+1.心法篇：穿透心法，小红书搞钱必备心法20篇
+2.认知篇：重塑认知，自媒体变现...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 1161</span>
+                        <span>文章 已更新 36 篇</span>
+                        <span>价格 ¥29.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/yunyingren.html'">
+                <img src="https://static.xiaobot.net/paper/2024-01-05/15580/1a263cfe92c3b992004f6f61afcc374c.png" alt="小红书投放策略红宝书">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 松月</span>
+                    </div>
+                    <h3 class="project-title">小红书投放策略红宝书</h3>
+                    <p class="project-description">
+                        “做好小红书投放，看这本就够了”！
+
+如今小红书内容场卷的差不多了，卷封面、卷标题、卷正文……效率逐...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 776</span>
+                        <span>文章 已更新 37 篇</span>
+                        <span>价格 ¥499.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/zaozhijob789.html'">
+                <img src="https://static.xiaobot.net/paper/2024-02-19/481442/0d929a3de8d12e08b55f053ec266a4ef.png" alt="手把手教你做小红书赚钱">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 知柚姐姐</span>
+                    </div>
+                    <h3 class="project-title">手把手教你做小红书赚钱</h3>
+                    <p class="project-description">
+                        我是知柚，全网粉丝100万+的自媒体创业者
+
+【小红书】
+擅长引流，1年引流私域50万人+
+擅长IP...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 575</span>
+                        <span>文章 已更新 30 篇</span>
+                        <span>价格 ¥299.0</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="project-card" data-category="redbook" data-price="paid" onclick="window.location.href='/p/zmsl02.html'">
+                <img src="https://static.xiaobot.net/paper/2022-09-03/79505/02ed1d23bea5da186d327fa7b38efbdb.jpeg" alt="小红书商业化案例库">
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-category">
+                            小红书
+                        </span>
+                        <span class="project-creator">by 自媒生路</span>
+                    </div>
+                    <h3 class="project-title">小红书商业化案例库</h3>
+                    <p class="project-description">
+                        本案例库从小红书成千上万的账号/笔记中，精挑细选、手动拆解出了150+有商业价值、可直接复制学习的真...
+                    </p>
+                    <div class="project-stats">
+                        <span>订阅人数 416</span>
+                        <span>文章 已更新 211 篇</span>
+                        <span>价格 ¥49.0</span>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // 页面加载时检查URL参数
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            const priceParam = urlParams.get('price');
+            const searchParam = urlParams.get('search');
+            
+            // 如果URL有分类参数，选中对应分类
+            if (categoryParam) {
+                const categoryCheck = document.querySelector(`input[name="category"][value="${categoryParam}"]`);
+                if (categoryCheck) {
+                    categoryCheck.checked = true;
+                }
+            }
+            
+            // 如果URL有价格参数，选中对应价格
+            if (priceParam) {
+                const priceRadio = document.querySelector(`input[name="price"][value="${priceParam}"]`);
+                if (priceRadio) {
+                    priceRadio.checked = true;
+                }
+            }
+            
+            // 如果URL有搜索参数，填充搜索框
+            if (searchParam) {
+                document.getElementById('search-input').value = searchParam;
+            }
+            
+            // 应用筛选
+            applyFilters();
+        });
+        
+        // 搜索功能
+        document.getElementById('search-btn').addEventListener('click', function() {
+            performSearch();
+        });
+        
+        document.getElementById('search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // 筛选变化时应用筛选
+        document.querySelectorAll('input[name="category"], input[name="price"]').forEach(input => {
+            input.addEventListener('change', applyFilters);
+        });
+        
+        function performSearch() {
+            const searchTerm = document.getElementById('search-input').value.trim();
+            const currentParams = new URLSearchParams(window.location.search);
+            
+            if (searchTerm) {
+                currentParams.set('search', searchTerm);
+            } else {
+                currentParams.delete('search');
+            }
+            
+            // 更新URL
+            window.history.pushState({}, '', `${window.location.pathname}?${currentParams.toString()}`);
+            
+            // 应用筛选
+            applyFilters();
+        }
+        
+        function applyFilters() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+            const selectedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(input => input.value);
+            const selectedPrice = document.querySelector('input[name="price"]:checked').value;
+            
+            const projectCards = document.querySelectorAll('.project-card');
+            let visibleCount = 0;
+            
+            projectCards.forEach(card => {
+                const category = card.dataset.category;
+                const price = card.dataset.price;
+                const title = card.querySelector('.project-title').textContent.toLowerCase();
+                const creator = card.querySelector('.project-creator').textContent.toLowerCase();
+                
+                // 搜索筛选
+                const matchesSearch = !searchTerm || title.includes(searchTerm) || creator.includes(searchTerm);
+                
+                // 分类筛选
+                const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
+                
+                // 价格筛选
+                let matchesPrice = true;
+                if (selectedPrice === 'free') {
+                    matchesPrice = price === 'free';
+                } else if (selectedPrice === 'paid') {
+                    matchesPrice = price === 'paid';
+                }
+                
+                if (matchesSearch && matchesCategory && matchesPrice) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // 更新统计
+            document.getElementById('search-stats').textContent = `找到 ${visibleCount} 个专栏`;
+        }
+    </script>
+
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>项目地图驿站</h3>
+                <p>发现优质项目，连接创作者与用户</p>
+            </div>
+            <div class="footer-section">
+                <h3>快速链接</h3>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/featured">精选</a></li>
+                    <li><a href="/ranking">排行</a></li>
+                    <li><a href="/categories">分类</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>更多</h3>
+                <ul>
+                    <li><a href="/creators">创作者</a></li>
+                    <li><a href="/tags">标签</a></li>
+                    <li><a href="/explore">探索</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">隐私说明</a> | 
+            <a href="/friends.html">友情链接</a> | 
+            <!-- <a href="/sitemap.xml">网站地图</a> -->
+        </div>
+        <div class="copyright">
+            
+                © 2025 项目地图驿站 xmdtyz.com. @xmdtyz.com.
+            
+            
+                <br>备案号：闽ICP备11018667号-2
+            
+            <!-- 本网站初始版本由项目地图驿站 xmdtyz.com-小报童导航,精选小报童专栏导航 开发-->
+        </div>
+    </footer>
+
+    <!-- 悬浮分类菜单 -->
+    <script src="/js/floating-menu-final.js"></script>
+</body>
+</html>

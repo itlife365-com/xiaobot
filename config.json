@@ -1,0 +1,59 @@
+{
+  "site": {
+    "title": "项目地图驿站",
+    "description": "发现优质项目，助力个人成长",
+    "version": "2.0.0",
+    "build_time": "2026-01-04T20:21:33.854618"
+  },
+  "api": {
+    "categories": "/api/categories",
+    "projects": "/api/projects",
+    "search": "/api/search"
+  },
+  "navigation": {
+    "main_menu": [
+      {
+        "name": "首页",
+        "url": "/",
+        "icon": "🏠"
+      },
+      {
+        "name": "精选",
+        "url": "/featured/",
+        "icon": "⭐"
+      },
+      {
+        "name": "排行",
+        "url": "/ranking/",
+        "icon": "🏆"
+      },
+      {
+        "name": "分类",
+        "url": "/categories/",
+        "icon": "📂"
+      },
+      {
+        "name": "创作者",
+        "url": "/creators/",
+        "icon": "👤"
+      },
+      {
+        "name": "标签",
+        "url": "/tags/",
+        "icon": "🏷️"
+      },
+      {
+        "name": "探索",
+        "url": "/explore/",
+        "icon": "🔍"
+      }
+    ]
+  },
+  "features": {
+    "search": true,
+    "filter": true,
+    "sort": true,
+    "pagination": true,
+    "responsive": true
+  }
+}
